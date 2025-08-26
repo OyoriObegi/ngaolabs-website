@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read the latest news, articles, and community updates from Ngao Labs. Stay informed about data science trends and our community.">
+    <title>Blog - Ngao Labs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><a href="index.html">Ngao Labs</a></h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#program" class="nav-link">Program</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#testimonials" class="nav-link">Success Stories</a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link active">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="apply.html" class="nav-link apply-btn">Apply Now</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Ngao Labs Blog</h1>
+            <p>Insights, updates, and stories from our community</p>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-content">
+        <div class="container">
+            <div class="blog-layout">
+                <!-- Main Content -->
+                <div class="blog-main">
+                    <!-- Search and Filters -->
+                    <div class="blog-filters">
+                        <div class="search-box">
+                            <input type="text" id="searchInput" placeholder="Search articles...">
+                            <button type="button" id="searchBtn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                        <div class="category-filters">
+                            <button class="category-btn active" data-category="all">All</button>
+                            <button class="category-btn" data-category="community">Community</button>
+                            <button class="category-btn" data-category="data-science">Data Science</button>
+                            <button class="category-btn" data-category="tech-trends">Tech Trends</button>
+                            <button class="category-btn" data-category="success-stories">Success Stories</button>
+                        </div>
+                    </div>
+
+                    <!-- Featured Article -->
+                    <article class="featured-article">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Data Science Community">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="category community">Community</span>
+                                <span class="date">December 15, 2024</span>
+                            </div>
+                            <h2>Building a Thriving Data Science Community: Lessons from Our First Year</h2>
+                            <p>Discover how Ngao Labs has grown from a small group of enthusiasts to a vibrant community of over 200 learners, and the key principles that made it possible.</p>
+                            <div class="article-author">
+                                <div class="author-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="author-info">
+                                    <h4>Dr. Sarah Chen</h4>
+                                    <p>Community Director</p>
+                                </div>
+                            </div>
+                            <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Article Grid -->
+                    <div class="articles-grid" id="articlesGrid">
+                        <!-- Article 1 -->
+                        <article class="article-card" data-category="data-science">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Machine Learning">
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="category data-science">Data Science</span>
+                                    <span class="date">December 12, 2024</span>
+                                </div>
+                                <h3>Introduction to Machine Learning: A Beginner's Guide</h3>
+                                <p>Start your machine learning journey with this comprehensive guide covering the fundamentals, algorithms, and practical applications.</p>
+                                <div class="article-author">
+                                    <h4>Marcus Rodriguez</h4>
+                                    <p>ML Instructor</p>
+                                </div>
+                                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Article 2 -->
+                        <article class="article-card" data-category="tech-trends">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2025&q=80" alt="AI Trends">
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="category tech-trends">Tech Trends</span>
+                                    <span class="date">December 10, 2024</span>
+                                </div>
+                                <h3>AI in 2024: What's Next for Data Scientists?</h3>
+                                <p>Explore the latest developments in artificial intelligence and how they're reshaping the data science landscape.</p>
+                                <div class="article-author">
+                                    <h4>Priya Patel</h4>
+                                    <p>AI Researcher</p>
+                                </div>
+                                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Article 3 -->
+                        <article class="article-card" data-category="success-stories">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Success Story">
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="category success-stories">Success Stories</span>
+                                    <span class="date">December 8, 2024</span>
+                                </div>
+                                <h3>From Marketing to Data Science: Jennifer's Career Transformation</h3>
+                                <p>Follow Jennifer's inspiring journey from marketing professional to successful data scientist through our program.</p>
+                                <div class="article-author">
+                                    <h4>Jennifer Kim</h4>
+                                    <p>Alumni</p>
+                                </div>
+                                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Article 4 -->
+                        <article class="article-card" data-category="community">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Workshop">
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="category community">Community</span>
+                                    <span class="date">December 5, 2024</span>
+                                </div>
+                                <h3>Upcoming Workshop: Data Visualization with Python</h3>
+                                <p>Join us for a hands-on workshop where you'll learn to create stunning visualizations using Python libraries.</p>
+                                <div class="article-author">
+                                    <h4>Alex Thompson</h4>
+                                    <p>Workshop Leader</p>
+                                </div>
+                                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Article 5 -->
+                        <article class="article-card" data-category="data-science">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Statistics">
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="category data-science">Data Science</span>
+                                    <span class="date">December 3, 2024</span>
+                                </div>
+                                <h3>Statistical Foundations Every Data Scientist Should Know</h3>
+                                <p>Master the essential statistical concepts that form the backbone of data science and machine learning.</p>
+                                <div class="article-author">
+                                    <h4>Dr. Michael Chang</h4>
+                                    <p>Statistics Professor</p>
+                                </div>
+                                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Article 6 -->
+                        <article class="article-card" data-category="tech-trends">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2025&q=80" alt="Big Data">
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="category tech-trends">Tech Trends</span>
+                                    <span class="date">November 30, 2024</span>
+                                </div>
+                                <h3>Big Data Technologies: Hadoop, Spark, and Beyond</h3>
+                                <p>Explore the evolving landscape of big data technologies and their applications in modern data science.</p>
+                                <div class="article-author">
+                                    <h4>David Wilson</h4>
+                                    <p>Big Data Specialist</p>
+                                </div>
+                                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Load More Button -->
+                    <div class="load-more">
+                        <button id="loadMoreBtn" class="btn btn-secondary">
+                            <i class="fas fa-plus"></i>
+                            Load More Articles
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="blog-sidebar">
+                    <!-- Newsletter Signup -->
+                    <div class="sidebar-widget newsletter-signup">
+                        <h3>Stay Updated</h3>
+                        <p>Get the latest articles and community updates delivered to your inbox.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+
+                    <!-- Popular Tags -->
+                    <div class="sidebar-widget popular-tags">
+                        <h3>Popular Tags</h3>
+                        <div class="tags">
+                            <a href="#" class="tag">Machine Learning</a>
+                            <a href="#" class="tag">Python</a>
+                            <a href="#" class="tag">Data Visualization</a>
+                            <a href="#" class="tag">Career Tips</a>
+                            <a href="#" class="tag">Community</a>
+                            <a href="#" class="tag">AI</a>
+                            <a href="#" class="tag">Statistics</a>
+                            <a href="#" class="tag">Big Data</a>
+                        </div>
+                    </div>
+
+                    <!-- Recent Posts -->
+                    <div class="sidebar-widget recent-posts">
+                        <h3>Recent Posts</h3>
+                        <div class="recent-post">
+                            <div class="recent-post-image">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Recent Post">
+                            </div>
+                            <div class="recent-post-content">
+                                <h4>Building a Thriving Data Science Community</h4>
+                                <span class="date">Dec 15, 2024</span>
+                            </div>
+                        </div>
+                        <div class="recent-post">
+                            <div class="recent-post-image">
+                                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2025&q=80" alt="Recent Post">
+                            </div>
+                            <div class="recent-post-content">
+                                <h4>AI in 2024: What's Next for Data Scientists?</h4>
+                                <span class="date">Dec 10, 2024</span>
+                            </div>
+                        </div>
+                        <div class="recent-post">
+                            <div class="recent-post-image">
+                                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Recent Post">
+                            </div>
+                            <div class="recent-post-content">
+                                <h4>From Marketing to Data Science: Jennifer's Journey</h4>
+                                <span class="date">Dec 8, 2024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Community Stats -->
+                    <div class="sidebar-widget community-stats">
+                        <h3>Community Stats</h3>
+                        <div class="stat">
+                            <div class="stat-number">200+</div>
+                            <div class="stat-label">Active Learners</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">15</div>
+                            <div class="stat-label">Expert Instructors</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">85%</div>
+                            <div class="stat-label">Career Transition Rate</div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Ngao Labs</h3>
+                    <p>Empowering communities through collaborative learning and innovation in data science and technology.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#program">Program</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Program</h4>
+                    <ul>
+                        <li><a href="apply.html">Apply Now</a></li>
+                        <li><a href="index.html#program">Curriculum</a></li>
+                        <li><a href="index.html#testimonials">Success Stories</a></li>
+                        <li><a href="blog.html">Community Updates</a></li>
+                    </ul>
+                </div>
+                				<div class="footer-section">
+					<h4>Contact Info</h4>
+					<p><i class="fas fa-envelope"></i> hello@ngaolabs.com</p>
+					<p><i class="fas fa-phone"></i> +254 (700) 123-456</p>
+					<p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+				</div>
+            </div>
+            			<div class="footer-bottom">
+				<p>&copy; 2025 Ngao Labs. All rights reserved.</p>
+			</div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html>
