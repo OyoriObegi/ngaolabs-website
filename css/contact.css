@@ -302,15 +302,17 @@
 }
 
 .contact-cta .btn-secondary {
-    background: transparent;
-    color: white;
-    border-color: white;
+    background: var(--white);
+    color: var(--primary);
+    border: 2px solid var(--white);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 }
 
 .contact-cta .btn-secondary:hover {
-    background: white;
-    color: #667eea;
+    background: var(--white);
+    color: var(--primary);
     transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
 }
 
 /* Responsive Design */

@@ -216,7 +216,7 @@
 
 .success-icon {
     font-size: 4rem;
-    color: #38a169;
+    color: #3B82F6;
     margin-bottom: 1.5rem;
 }
 
@@ -260,11 +260,11 @@
 .form-group.valid input,
 .form-group.valid select,
 .form-group.valid textarea {
-    border-color: #38a169;
+    border-color: #3B82F6;
 }
 
 .form-group.valid label {
-    color: #38a169;
+    color: #3B82F6;
 }
 
 /* Responsive Design */

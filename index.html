@@ -10,8 +10,9 @@
 	<meta property="og:description" content="Join our community-led, peer-to-peer data science and tech training programs.">
 	<meta property="og:type" content="website">
 	<title>Ngao Labs - Data Science & Tech Training Initiative</title>
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/animations.css">
+	<link rel="icon" type="image/png" href="images/logo.png">
+	<link rel="stylesheet" href="css/style.css?v=20250826">
+	<link rel="stylesheet" href="css/animations.css?v=20250826">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -25,11 +26,13 @@
 			<ul class="nav-menu">
 				<li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
 				<li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+				<li class="nav-item"><a href="/team" class="nav-link">Team</a></li>
 				<li class="nav-item"><a href="#program" class="nav-link">Program</a></li>
-				<li class="nav-item"><a href="#testimonials" class="nav-link">Success Stories</a></li>
-				<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-				<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-				<li class="nav-item"><a href="apply.html" class="nav-link apply-btn">Apply Now</a></li>
+				<li class="nav-item"><a href="#testimonials" class="nav-link">Benefits</a></li>
+				<li class="nav-item"><a href="/resources" class="nav-link">Resources</a></li>
+				<li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+				<li class="nav-item"><a href="/legal" class="nav-link">Terms & Privacy</a></li>
+				<li class="nav-item"><a href="/apply" class="nav-link apply-btn">Join Waitlist</a></li>
 			</ul>
 			<div class="hamburger">
 				<span class="bar"></span>
@@ -43,18 +46,117 @@
 	<section id="home" class="hero">
 		<div class="hero-container">
 			<div class="hero-content">
-				<h1 class="hero-title">Transform Your Future with Data Science</h1>
-				<p class="hero-subtitle">Join Ngao Labs' community-led, peer-to-peer training programs and master the skills that drive innovation in today's digital economy.</p>
+				<div class="hero-badge">
+					<span class="hero-badge-emoji">🚀</span>
+					<span>Cohort 1 Graduation: Dec 12</span>
+				</div>
+				<h1 class="hero-title">
+					Transform Your Future with
+					<span class="hero-gradient-text">Data Science</span>
+				</h1>
+				<p class="hero-subtitle">
+					Join Ngao Labs' community-led, peer-to-peer training programs and master the skills that drive innovation.
+				</p>
 				<div class="hero-buttons">
-					<a href="apply.html" class="btn btn-primary">Apply Now</a>
-					<a href="#program" class="btn btn-secondary">Learn More</a>
+					<a href="/apply" class="btn btn-primary">Join Cohort 2 Waitlist</a>
+					<a href="/contact" class="btn btn-secondary hero-secondary-btn">Partner with Us</a>
 				</div>
 			</div>
-			<div class="hero-image">
-				<div class="hero-graphic">
-					<i class="fas fa-chart-line"></i>
-					<i class="fas fa-code"></i>
-					<i class="fas fa-brain"></i>
+			<div class="hero-visual">
+				<div class="hero-terminal floating-terminal">
+					<div class="terminal-header">
+						<span class="terminal-dot dot-red"></span>
+						<span class="terminal-dot dot-yellow"></span>
+						<span class="terminal-dot dot-green"></span>
+						<span class="terminal-title">ngaolabs/main.py</span>
+					</div>
+					<div class="terminal-body">
+						<pre class="terminal-code"><code>import pandas as pd
+from ngao_labs import IncubationProgram
+
+# Load the next generation of tech talent
+data = pd.read_csv('african_tech_talent.csv')
+
+# Filter for passion and grit
+cohort = data[data['status'] == 'Ready to Learn']
+
+# Train the model with peer support
+model = IncubationProgram(method='peer-to-peer')
+impact = model.fit(cohort)
+
+# Predict the future
+print(f"Projected Outcome: {impact} Lives Transformed 🚀")</code></pre>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Partners Section -->
+	<section class="partners-section">
+		<div class="container">
+			<p class="partners-tagline">Building with the best.</p>
+			<div class="partners-grid">
+				<div class="partner-logo">
+					<i class="fab fa-github"></i>
+					<span>GitHub</span>
+				</div>
+				<div class="partner-logo">
+					<i class="fab fa-discord"></i>
+					<span>Discord</span>
+				</div>
+				<div class="partner-logo">
+					<img src="images/zindi-logo.png" alt="Zindi">
+					<span>Zindi</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Stats Section -->
+	<section class="stats-section">
+		<div class="container">
+			<div class="stats-grid">
+				<div class="stat-item">
+					<div class="stat-number" data-target="15">0</div>
+					<div class="stat-label">Active Learners</div>
+				</div>
+				<div class="stat-item">
+					<div class="stat-number" data-target="10">0</div>
+					<div class="stat-label">10-Week Intensive Program</div>
+				</div>
+				<div class="stat-item">
+					<div class="stat-number" data-target="90">0</div>
+					<div class="stat-label">Cohort Retention</div>
+				</div>
+				<div class="stat-item">
+					<div class="stat-label">Daily Mentorship & Standups</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Community Updates Section -->
+	<section class="community-updates">
+		<div class="container">
+			<div class="section-header">
+				<h2>Community Updates</h2>
+				<p>Stay informed about our latest milestones and upcoming events</p>
+			</div>
+			<div class="updates-grid">
+				<div class="update-card">
+					<div class="update-icon">
+						<i class="fas fa-project-diagram"></i>
+					</div>
+					<h3>Cohort 1 Capstone Phase</h3>
+					<p>Our first cohort is currently finalizing their capstone projects, focusing on real-world AI and Data Science solutions.</p>
+				</div>
+				<div class="update-card">
+					<div class="update-icon">
+						<i class="fas fa-graduation-cap"></i>
+					</div>
+					<h3>Upcoming Graduation</h3>
+					<p>Join us virtually on Friday, December 12th, as we celebrate the next wave of tech leaders.</p>
 				</div>
 			</div>
 		</div>
@@ -84,6 +186,66 @@
 					<p>We believe in the power of collaborative learning, where students become teachers and innovation emerges from diverse perspectives working together.</p>
 				</div>
 			</div>
+			
+			<!-- Leadership & Governance Section -->
+			<div class="leadership-section" style="margin-top: 60px;">
+				<div class="section-header">
+					<h2>Governance & Oversight</h2>
+					<p>Strategic leadership committed to delivering impact-driven, project-based learning experiences</p>
+				</div>
+				<div class="leadership-category">
+					<div class="team-grid">
+						<div class="team-member">
+							<div class="member-image">
+								<img src="images/oyoriobegi.png" alt="Oyori Obegi">
+							</div>
+							<h4>Oyori Obegi</h4>
+							<p class="member-role">Founder & CEO</p>
+							<p class="member-bio">Data Analyst and Founder of Ngao Labs. With a background in Applied Statistics and Computer Science, he specializes in building intelligent systems to drive social impact. He leads the mission to democratize tech education in Africa.</p>
+						</div>
+						<div class="team-member">
+							<div class="member-image">
+								<img src="images/lameckagasa.jpg" alt="Lameck Agasa">
+							</div>
+							<h4>Lameck Agasa</h4>
+							<p class="member-role">Chairman of the Board</p>
+							<p class="member-bio">An experienced statistician providing strategic oversight. He holds an MSc in Applied Statistics from Jomo Kenyatta University of Agriculture and Technology (JKUAT).</p>
+						</div>
+						<div class="team-member">
+							<div class="member-image">
+								<img src="images/fredmonari.jpg" alt="Dr. Fred Monari">
+							</div>
+							<h4>Dr. Fred Monari</h4>
+							<p class="member-role">Treasurer</p>
+							<p class="member-bio">A specialist in data systems and financial oversight. Dr. Monari holds a PhD in Applied Statistics from JKUAT.</p>
+						</div>
+						<div class="team-member">
+							<div class="member-image">
+								<img src="images/judithmwaniki.jpeg" alt="Judith Ng'endo">
+							</div>
+							<h4>Judith Ng'endo</h4>
+							<p class="member-role">Secretary</p>
+							<p class="member-bio">Coordinates board governance and operations. She holds a BSc in Applied Statistics with Computing from Karatina University and a Postgraduate Diploma in Leadership and Accountability from Open University of Kenya.</p>
+						</div>
+						<div class="team-member">
+							<div class="member-image">
+								<img src="images/jebiwotdoris.jpg" alt="Doris Jebiwot">
+							</div>
+							<h4>Doris Jebiwot</h4>
+							<p class="member-role">Board Member</p>
+							<p class="member-bio">Contributes to strategic planning and curriculum oversight. She holds a Bachelor's degree in Applied Statistics with Computing from Karatina University.</p>
+						</div>
+						<div class="team-member">
+							<div class="member-image">
+								<img src="images/kelvinwarukenya.jpg" alt="Kelvin Warukenya">
+							</div>
+							<h4>Kelvin Warukenya</h4>
+							<p class="member-role">Board Member</p>
+							<p class="member-bio">Focuses on technical modeling and mathematics. He holds a BSc in Mathematics and Modelling Processes from Dedan Kimathi University of Technology.</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 
@@ -92,62 +254,86 @@
 		<div class="container">
 			<div class="section-header">
 				<h2>Foundations of Data Science & AI (10 Weeks)</h2>
-				<p>Our first course is now open. More programs are planned next.</p>
+				<p>A comprehensive roadmap from foundations to capstone</p>
 			</div>
-			<div class="program-schedule">
-				<div class="week-card">
-					<div class="week-number">Week 1-2</div>
-					<h3>Foundation & Fundamentals</h3>
-					<ul>
-						<li>Python Programming Basics</li>
-						<li>Data Structures & Algorithms</li>
-						<li>Mathematics for Data Science</li>
-						<li>Version Control with Git</li>
-					</ul>
+			
+			<!-- Phase 1: Foundations -->
+			<div class="curriculum-phase">
+				<div class="phase-header">
+					<h3>Phase 1: Foundations (Weeks 1–5)</h3>
 				</div>
-				<div class="week-card">
-					<div class="week-number">Week 3-4</div>
-					<h3>Data Manipulation</h3>
-					<ul>
-						<li>Pandas & NumPy</li>
-						<li>Data Cleaning & Preprocessing</li>
-						<li>Exploratory Data Analysis</li>
-						<li>Data Visualization</li>
-					</ul>
+				<div class="weeks-grid">
+					<div class="week-card">
+						<div class="week-number">Week 1</div>
+						<h4>Data Science & AI Foundations</h4>
+					</div>
+					<div class="week-card">
+						<div class="week-number">Week 2</div>
+						<h4>Python for Data Science</h4>
+					</div>
+					<div class="week-card">
+						<div class="week-number">Week 3</div>
+						<h4>Data Preprocessing & Feature Engineering</h4>
+					</div>
+					<div class="week-card">
+						<div class="week-number">Week 4</div>
+						<h4>Regression & Classification Models</h4>
+					</div>
+					<div class="week-card">
+						<div class="week-number">Week 5</div>
+						<h4>Clustering & Unsupervised Learning</h4>
+					</div>
 				</div>
-				<div class="week-card">
-					<div class="week-number">Week 5-6</div>
-					<h3>Machine Learning</h3>
-					<ul>
-						<li>Supervised Learning</li>
-						<li>Unsupervised Learning</li>
-						<li>Model Evaluation</li>
-						<li>Feature Engineering</li>
-					</ul>
+			</div>
+
+			<!-- Mid-Program Break -->
+			<div class="break-week">
+				<div class="break-content">
+					<i class="fas fa-pause-circle"></i>
+					<h3>Mid-Program Break</h3>
+					<p>Reflection, Consolidation, and Peer Review</p>
 				</div>
-				<div class="week-card">
-					<div class="week-number">Week 7-8</div>
-					<h3>Advanced Topics</h3>
-					<ul>
-						<li>Deep Learning Basics</li>
-						<li>Natural Language Processing</li>
-						<li>Big Data Technologies</li>
-						<li>Cloud Computing</li>
-					</ul>
+			</div>
+
+			<!-- Phase 2: Advanced & Applied AI -->
+			<div class="curriculum-phase">
+				<div class="phase-header">
+					<h3>Phase 2: Advanced & Applied AI (Weeks 6–9)</h3>
 				</div>
-				<div class="week-card">
-					<div class="week-number">Week 9-10</div>
-					<h3>Project & Portfolio</h3>
-					<ul>
-						<li>Capstone Project</li>
-						<li>Portfolio Development</li>
-						<li>Career Preparation</li>
-						<li>Community Presentation</li>
-					</ul>
+				<div class="weeks-grid">
+					<div class="week-card">
+						<div class="week-number">Week 6</div>
+						<h4>Neural Networks & Deep Learning</h4>
+					</div>
+					<div class="week-card">
+						<div class="week-number">Week 7</div>
+						<h4>Generative AI Foundations</h4>
+					</div>
+					<div class="week-card">
+						<div class="week-number">Week 8</div>
+						<h4>Practical Data Science & Applied AI</h4>
+					</div>
+					<div class="week-card">
+						<div class="week-number">Week 9</div>
+						<h4>AI Ethics and Society</h4>
+					</div>
+				</div>
+			</div>
+
+			<!-- Phase 3: Capstone & Graduation -->
+			<div class="curriculum-phase">
+				<div class="phase-header">
+					<h3>Phase 3: Capstone & Graduation (Week 10)</h3>
+				</div>
+				<div class="weeks-grid">
+					<div class="week-card week-card-special">
+						<div class="week-number week-number-special">Week 10</div>
+						<h4>Capstone Project & Incubation Selection</h4>
+						<p class="incubation-note">Top projects enter the <strong>Ngao Labs Incubation Programme</strong></p>
+					</div>
 				</div>
 			</div>
 			<div class="program-features">
-				<div class="feature"><i class="fas fa-clock"></i><h4>Flexible Schedule</h4><p>Evening and weekend sessions to accommodate working professionals</p></div>
 				<div class="feature"><i class="fas fa-hands-helping"></i><h4>Peer Mentoring</h4><p>Learn from and teach your fellow participants</p></div>
 				<div class="feature"><i class="fas fa-laptop-code"></i><h4>Hands-on Projects</h4><p>Real-world applications and portfolio-building projects</p></div>
 				<div class="feature"><i class="fas fa-network-wired"></i><h4>Network Building</h4><p>Connect with industry professionals and alumni</p></div>
@@ -169,30 +355,29 @@
 		</div>
 	</section>
 
-	<!-- Founding Cohort Benefits (replaces Success Stories) -->
+	<!-- The Ngao Labs Advantage -->
 	<section id="testimonials" class="testimonials">
 		<div class="container">
 			<div class="section-header">
-				<h2>Founding Cohort Benefits</h2>
-				<p>What you gain by joining our first offering</p>
+				<h2>The Ngao Labs Advantage</h2>
 			</div>
 			<div class="testimonials-grid">
 				<div class="testimonial-card">
 					<div class="testimonial-content">
-						<h3><i class="fas fa-hands-helping"></i> Hands-on Mentorship</h3>
-						<p>Direct access to instructors and mentors with weekly office hours and code reviews.</p>
+						<h3><i class="fas fa-hands-helping"></i> Expert Mentorship & Accountability</h3>
+						<p>Daily morning standups, regular code reviews, and direct guidance from industry mentors to keep you on track.</p>
 					</div>
 				</div>
 				<div class="testimonial-card">
 					<div class="testimonial-content">
-						<h3><i class="fas fa-users"></i> Peer Learning Circles</h3>
-						<p>Small-group collaboration, pair programming, and presentations to cement learning.</p>
+						<h3><i class="fas fa-users"></i> Community-Led Learning</h3>
+						<p>Master concepts through pair programming and peer review. We believe that to teach is to learn twice.</p>
 					</div>
 				</div>
 				<div class="testimonial-card">
 					<div class="testimonial-content">
-						<h3><i class="fas fa-briefcase"></i> Career Prep & Portfolio</h3>
-						<p>Build a showcase-ready project and get interview prep tailored for data roles.</p>
+						<h3><i class="fas fa-briefcase"></i> Incubation & Real Impact</h3>
+						<p>Beyond a certificate: Build a production-ready capstone. Top projects are selected for the Ngao Labs Incubation Programme.</p>
 					</div>
 				</div>
 			</div>
@@ -205,7 +390,57 @@
 			<div class="cta-content">
 				<h2>Ready to Transform Your Career?</h2>
 				<p>Join our next cohort and become part of a community that's shaping the future of data science education.</p>
-				<a href="apply.html" class="btn btn-primary">Apply Now</a>
+				<div class="cta-buttons">
+					<a href="/apply" class="btn btn-primary">Join Cohort 2 Waitlist</a>
+					<a href="/contact" class="btn btn-secondary">Partner with Us</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Student Success Stories -->
+	<section class="success-stories">
+		<div class="container">
+			<div class="section-header">
+				<h2>Hear from our Future Data Leaders</h2>
+			</div>
+			<div class="stories-grid">
+				<div class="story-card">
+					<div class="story-avatar">
+						<img src="images/valentine.jpg" alt="Valentine">
+					</div>
+					<div class="story-content">
+						<p class="story-quote">"Ngao Labs isn't just a class; it's a community. The peer learning approach helped me understand complex AI concepts faster than I ever could alone. I now feel ready for the tech industry."</p>
+						<div class="story-author">
+							<h4>Valentine</h4>
+							<p>Cohort 1 Learner</p>
+						</div>
+					</div>
+				</div>
+				<div class="story-card">
+					<div class="story-avatar">
+						<img src="images/evaline.jpg" alt="Evaline">
+					</div>
+					<div class="story-content">
+						<p class="story-quote">"I came in with curiosity and left with a portfolio. The daily mentorship and hands-on Zindi challenges pushed me to build real solutions. It was intense, but completely worth it."</p>
+						<div class="story-author">
+							<h4>Evaline</h4>
+							<p>Cohort 1 Learner</p>
+						</div>
+					</div>
+				</div>
+				<div class="story-card">
+					<div class="story-avatar">
+						<img src="images/anderson.jpg" alt="Anderson">
+					</div>
+					<div class="story-content">
+						<p class="story-quote">"The capstone project is the highlight for me. Taking a problem from a simple concept to a working prototype is giving me the confidence to finally call myself a Data Scientist."</p>
+						<div class="story-author">
+							<h4>Anderson</h4>
+							<p>Cohort 1 Learner</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -217,6 +452,13 @@
 				<div class="footer-section">
 					<h3>Ngao Labs</h3>
 					<p>Safeguarding the Next Wave of Tech Leaders.</p>
+					<form class="newsletter-form" novalidate>
+						<label class="newsletter-label" for="footer-email">Stay in the loop</label>
+						<div class="newsletter-input-group">
+							<input id="footer-email" type="email" placeholder="Enter your email" required>
+							<button type="submit" class="btn btn-primary">Subscribe</button>
+						</div>
+					</form>
 					<div class="social-links">
 						<a href="#"><i class="fab fa-twitter"></i></a>
 						<a href="#"><i class="fab fa-linkedin"></i></a>
@@ -224,29 +466,30 @@
 						<a href="#"><i class="fab fa-discord"></i></a>
 					</div>
 				</div>
-				<div class="footer-section">
-					<h4>Quick Links</h4>
-					<ul>
-						<li><a href="#home">Home</a></li>
-						<li><a href="#about">About</a></li>
-						<li><a href="#program">Program</a></li>
-						<li><a href="blog.html">Blog</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
-				</div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="/team">Team</a></li>
+                        <li><a href="#program">Program</a></li>
+                        <li><a href="/resources">Resources</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/legal">Terms & Privacy</a></li>
+                    </ul>
+                </div>
 				<div class="footer-section">
 					<h4>Program</h4>
 					<ul>
-						<li><a href="apply.html">Apply Now</a></li>
+						<li><a href="/apply">Join Cohort 2 Waitlist</a></li>
 						<li><a href="#program">Curriculum</a></li>
-						<li><a href="#testimonials">Success Stories</a></li>
-						<li><a href="blog.html">Community Updates</a></li>
+						<li><a href="#testimonials">Benefits</a></li>
+						<li><a href="/resources">Community Updates</a></li>
 					</ul>
 				</div>
 				<div class="footer-section">
 					<h4>Contact Info</h4>
-					<p><i class="fas fa-envelope"></i> hello@ngaolabs.com</p>
-					<p><i class="fas fa-phone"></i> +254 (700) 123-456</p>
+					<p><i class="fas fa-envelope"></i> hello@ngaolabs.org</p>
 					<p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
 				</div>
 			</div>
@@ -256,6 +499,6 @@
 		</div>
 	</footer>
 
-	<script src="js/main.js"></script>
+	<script src="js/main.js?v=20250826"></script>
 </body>
 </html>

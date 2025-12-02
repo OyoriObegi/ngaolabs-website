@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initFormValidation();
     initNewsletterSignup();
     initIntersectionObserver();
+    initFAQ();
 });
 
 // Navigation functionality
@@ -96,7 +97,7 @@ function initScrollEffects() {
     const counters = document.querySelectorAll('.stat-number');
     const animateCounters = () => {
         counters.forEach(counter => {
-            const target = parseInt(counter.textContent.replace(/\D/g, ''));
+            const target = parseInt(counter.getAttribute('data-target') || counter.textContent.replace(/\D/g, ''));
             const increment = target / 100;
             let current = 0;
             
@@ -115,7 +116,7 @@ function initScrollEffects() {
     };
 
     // Trigger counter animation when stats section is visible
-    const statsSection = document.querySelector('.community-stats');
+    const statsSection = document.querySelector('.stats-section');
     if (statsSection) {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -308,6 +309,19 @@ function handleFormSubmission(form) {
 		body = JSON.stringify(payload);
 	}
 
+	if (location.protocol === 'file:') {
+		setTimeout(() => {
+			form.style.display = 'none';
+			const successMessage = form.parentNode.querySelector('.success-message');
+			if (successMessage) successMessage.style.display = 'block';
+			form.reset();
+			submitBtn.classList.remove('loading');
+			submitBtn.disabled = false;
+			submitBtn.innerHTML = originalText;
+		}, 300);
+		return;
+	}
+
 	fetch(action, {
 		method: 'POST',
 		headers,
@@ -351,7 +365,7 @@ function initNewsletterSignup() {
                 const successMsg = document.createElement('div');
                 successMsg.className = 'newsletter-success';
                 successMsg.innerHTML = '<i class="fas fa-check-circle"></i> Thank you for subscribing!';
-                successMsg.style.cssText = 'color: #38a169; margin-top: 0.5rem; font-size: 0.9rem;';
+                successMsg.style.cssText = 'color: #3B82F6; margin-top: 0.5rem; font-size: 0.9rem;';
                 
                 form.appendChild(successMsg);
                 form.reset();
@@ -473,6 +487,31 @@ window.addEventListener('error', function(e) {
     console.error('JavaScript error:', e.error);
     // You can add error reporting logic here
 });
+
+// FAQ Accordion Functionality
+function initFAQ() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        if (question) {
+            question.addEventListener('click', function() {
+                const isActive = item.classList.contains('active');
+                
+                // Close all FAQ items
+                faqItems.forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        }
+    });
+}
 
 // Console welcome message
 console.log('%cWelcome to Ngao Labs! 🚀', 'color: #667eea; font-size: 20px; font-weight: bold;');
