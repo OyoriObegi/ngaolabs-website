@@ -312,7 +312,7 @@ class SecureResourcesManager {
                     title: 'Keynote: From Data to Impact',
                     description: 'Ngao Labs Founder Oyori Obegi recently addressed university students on how analytics powers intelligent systems and shapes the future of work.',
                     imageData: null,
-                    imageUrl: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                    imageUrl: 'images/oyoriobegi_keynote_wide.jpg',
                     linkUrl: 'blog/keynote-data-impact.html',
                     category: 'Thought Leadership',
                     date: '2025-10-29',
