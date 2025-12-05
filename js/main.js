@@ -312,6 +312,8 @@ function handleFormSubmission(form) {
 	if (location.protocol === 'file:') {
 		setTimeout(() => {
 			form.style.display = 'none';
+			const formHeader = form.closest('.form-container').querySelector('.form-header');
+			if (formHeader) formHeader.style.display = 'none';
 			const successMessage = form.parentNode.querySelector('.success-message');
 			if (successMessage) successMessage.style.display = 'block';
 			form.reset();
@@ -337,6 +339,8 @@ function handleFormSubmission(form) {
 	.then(() => {
 		// Hide form and show success message
 		form.style.display = 'none';
+		const formHeader = form.closest('.form-container').querySelector('.form-header');
+		if (formHeader) formHeader.style.display = 'none';
 		const successMessage = form.parentNode.querySelector('.success-message');
 		if (successMessage) successMessage.style.display = 'block';
 		form.reset();
