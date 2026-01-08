@@ -20,8 +20,12 @@ function initNavigation() {
     // Mobile menu toggle
     if (hamburger && navMenu) {
         hamburger.addEventListener('click', function() {
+            const isExpanded = hamburger.classList.contains('active');
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
+            
+            // Update ARIA attribute
+            hamburger.setAttribute('aria-expanded', !isExpanded);
             
             // Prevent body scroll when menu is open
             if (navMenu.classList.contains('active')) {
@@ -35,9 +39,10 @@ function initNavigation() {
     // Close mobile menu when clicking on a link
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
-            if (hamburger.classList.contains('active')) {
+            if (hamburger && hamburger.classList.contains('active')) {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
                 document.body.style.overflow = '';
             }
         });
@@ -45,9 +50,10 @@ function initNavigation() {
 
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(e) {
-        if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+        if (hamburger && navMenu && !hamburger.contains(e.target) && !navMenu.contains(e.target) && navMenu.classList.contains('active')) {
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
             document.body.style.overflow = '';
         }
     });
