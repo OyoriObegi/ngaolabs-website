@@ -9,7 +9,82 @@ document.addEventListener('DOMContentLoaded', function() {
     initNewsletterSignup();
     initIntersectionObserver();
     initFAQ();
+    initBackToTop();
+    initThemeToggle();
+    initReadingProgress();
 });
+
+// Reading Progress functionality
+function initReadingProgress() {
+    const progress = document.querySelector('.reading-progress');
+    if (!progress) return;
+
+    window.addEventListener('scroll', () => {
+        const windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (windowScroll / height) * 100;
+        progress.style.width = scrolled + '%';
+    });
+}
+
+// Theme Toggle functionality
+function initThemeToggle() {
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    const themeToggleBtn = document.createElement('button');
+    themeToggleBtn.className = 'theme-toggle';
+    themeToggleBtn.innerHTML = `
+        <i class="fas fa-moon" title="Switch to dark mode"></i>
+        <i class="fas fa-sun" title="Switch to light mode"></i>
+    `;
+    themeToggleBtn.setAttribute('aria-label', 'Toggle theme');
+
+    const navContainer = document.querySelector('.nav-container');
+    const hamburger = document.querySelector('.hamburger');
+    
+    if (navContainer) {
+        // Insert before hamburger or as last item
+        if (hamburger) {
+            navContainer.insertBefore(themeToggleBtn, hamburger);
+        } else {
+            navContainer.appendChild(themeToggleBtn);
+        }
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+        const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        
+        // Show feedback toast
+        showToast(`Switched to ${theme} mode`, 'info');
+    });
+}
+
+// Back to Top functionality
+function initBackToTop() {
+    const backToTopBtn = document.createElement('button');
+    backToTopBtn.className = 'back-to-top';
+    backToTopBtn.innerHTML = '<i class="fas fa-chevron-up"></i>';
+    backToTopBtn.setAttribute('aria-label', 'Back to top');
+    document.body.appendChild(backToTopBtn);
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
 
 // Navigation functionality
 function initNavigation() {
@@ -370,32 +445,79 @@ function handleFormSubmission(form) {
 	});
 }
 
-// Newsletter signup
+// Newsletter signup functionality
 function initNewsletterSignup() {
     const newsletterForms = document.querySelectorAll('.newsletter-form');
     
     newsletterForms.forEach(form => {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            const email = form.querySelector('input[type="email"]').value;
+            const emailInput = this.querySelector('input[type="email"]');
+            const submitBtn = this.querySelector('button');
+            const originalBtnText = submitBtn.textContent;
             
-            if (email) {
-                // Show success message
-                const successMsg = document.createElement('div');
-                successMsg.className = 'newsletter-success';
-                successMsg.innerHTML = '<i class="fas fa-check-circle"></i> Thank you for subscribing!';
-                successMsg.style.cssText = 'color: #3B82F6; margin-top: 0.5rem; font-size: 0.9rem;';
+            if (validateEmail(emailInput.value)) {
+                // Show loading state
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Subscribing...';
                 
-                form.appendChild(successMsg);
-                form.reset();
-                
-                // Remove success message after 3 seconds
+                // Simulate API call
                 setTimeout(() => {
-                    successMsg.remove();
-                }, 3000);
+                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Subscribed!';
+                    submitBtn.classList.add('btn-success');
+                    emailInput.value = '';
+                    
+                    // Show success message
+                    showToast('Thanks for subscribing! Check your email to confirm.', 'success');
+                    
+                    // Reset button after 3 seconds
+                    setTimeout(() => {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalBtnText;
+                        submitBtn.classList.remove('btn-success');
+                    }, 3000);
+                }, 1500);
+            } else {
+                showToast('Please enter a valid email address.', 'error');
+                emailInput.focus();
             }
         });
     });
+}
+
+// Utility function to show toast messages
+function showToast(message, type = 'info') {
+    let toastContainer = document.querySelector('.toast-container');
+    if (!toastContainer) {
+        toastContainer = document.createElement('div');
+        toastContainer.className = 'toast-container';
+        document.body.appendChild(toastContainer);
+    }
+    
+    const toast = document.createElement('div');
+    toast.className = `toast toast-${type}`;
+    toast.innerHTML = `
+        <div class="toast-icon">
+            <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i>
+        </div>
+        <div class="toast-content">${message}</div>
+    `;
+    
+    toastContainer.appendChild(toast);
+    
+    // Animate in
+    setTimeout(() => toast.classList.add('visible'), 10);
+    
+    // Remove after 5 seconds
+    setTimeout(() => {
+        toast.classList.remove('visible');
+        setTimeout(() => toast.remove(), 300);
+    }, 5000);
+}
+
+// Helper to validate email
+function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 // Intersection Observer for scroll animations

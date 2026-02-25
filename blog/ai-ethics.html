@@ -18,7 +18,7 @@
     <meta property="og:url" content="https://ngaolabs.org/blog/ai-ethics">
     <meta property="og:title" content="AI Safety & Ethics: First Principles">
     <meta property="og:description" content="Why Ngao Labs prioritizes responsible AI and bias reduction in every model we build.">
-    <meta property="og:image" content="https://ngaolabs.org/images/AI-ethics.jpg">
+    <meta property="og:image" content="https://ngaolabs.org/images/AI-ethics.webp">
     <meta property="og:site_name" content="Ngao Labs">
     
     <!-- Twitter Card -->
@@ -27,13 +27,13 @@
     <meta name="twitter:url" content="https://ngaolabs.org/blog/ai-ethics">
     <meta name="twitter:title" content="AI Safety & Ethics: First Principles">
     <meta name="twitter:description" content="Why Ngao Labs prioritizes responsible AI and bias reduction in every model we build.">
-    <meta name="twitter:image" content="https://ngaolabs.org/images/AI-ethics.jpg">
+    <meta name="twitter:image" content="https://ngaolabs.org/images/AI-ethics.webp">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://ngaolabs.org/blog/ai-ethics">
     
     <title>AI Safety & Ethics: First Principles - Ngao Labs</title>
-    <link rel="icon" type="image/png" href="../images/logo1.png">
+    <link rel="icon" type="image/webp" href="../images/logo1.webp">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     
     <!-- Preconnect for performance -->
@@ -42,101 +42,12 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
     <link rel="stylesheet" href="../css/style.css?v=20260109">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/blog.css?v=20260109">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .blog-post {
-            padding: 80px 0;
-            background: var(--white);
-        }
-        .blog-header {
-            text-align: center;
-            margin-bottom: 3rem;
-            padding-bottom: 2rem;
-            border-bottom: 2px solid #e5e7eb;
-        }
-        .blog-meta {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1rem;
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-        .blog-meta span {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .blog-title {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-        .blog-hero {
-            width: 100%;
-            height: 400px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            border-radius: 15px;
-            margin-bottom: 3rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 4rem;
-        }
-        .blog-content {
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.8;
-            color: var(--text);
-        }
-        .blog-content h3 {
-            color: var(--primary);
-            font-size: 1.75rem;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        .blog-content h4 {
-            color: var(--primary);
-            font-size: 1.4rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-        .blog-content p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-        }
-        .blog-content ul, .blog-content ol {
-            margin: 1.5rem 0;
-            padding-left: 2rem;
-        }
-        .blog-content li {
-            margin-bottom: 0.75rem;
-            font-size: 1.1rem;
-        }
-        .blog-content strong {
-            color: var(--primary);
-            font-weight: 600;
-        }
-        .blog-content em {
-            font-style: italic;
-        }
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--primary);
-            margin-bottom: 2rem;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .back-link:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
+    <div class="reading-progress"></div>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWCD22DH"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -146,17 +57,17 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2><a href="/">Ngao Labs</a></h2>
+                <a href="/">
+                    <img src="../images/logo1.webp" alt="Ngao Labs" class="logo-mark">
+                    <span class="logo-text">Ngao Labs</span>
+                </a>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="/#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="/resources" class="nav-link active">Resources</a></li>
                 <li class="nav-item"><a href="/team" class="nav-link">Team</a></li>
-                <li class="nav-item"><a href="/#program" class="nav-link">Program</a></li>
-                <li class="nav-item"><a href="/#testimonials" class="nav-link">Benefits</a></li>
-                <li class="nav-item"><a href="/resources" class="nav-link">Resources</a></li>
                 <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
-                <li class="nav-item"><a href="/apply" class="nav-link apply-btn">Apply Now</a></li>
+                <li class="nav-item"><a href="/apply" class="nav-link apply-btn">Cohort 3 Waitlist</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -167,37 +78,72 @@
     </nav>
 
     <!-- Blog Post -->
-    <section class="blog-post">
-        <div class="container">
+    <article class="blog-post">
+        <div class="blog-container">
             <a href="/resources" class="back-link">
                 <i class="fas fa-arrow-left"></i> Back to Resources
             </a>
             
-            <div class="blog-header">
+            <header class="blog-header">
                 <div class="blog-meta">
                     <span><i class="fas fa-calendar"></i> November 10, 2025</span>
-                    <span><i class="fas fa-tag"></i> Education</span>
+                    <span><i class="fas fa-tag"></i> AI Ethics</span>
+                    <span><i class="fas fa-clock"></i> 4 min read</span>
                 </div>
-                <h1 class="blog-title">AI Safety & Ethics: First Principles</h1>
-            </div>
+                <h1 class="blog-title">AI Safety & Ethics: First Principles for the Next Generation</h1>
+                <p class="blog-excerpt">Why Ngao Labs prioritizes responsible AI and bias reduction as a foundational pillar of our curriculum.</p>
+            </header>
 
             <div class="blog-hero">
-                <i class="fas fa-shield-alt"></i>
+                <img src="../images/AI-ethics.webp" alt="Abstract representation of AI ethics and connectivity" loading="lazy">
+                <div class="blog-hero-overlay">
+                    <i class="fas fa-shield-alt blog-hero-icon"></i>
+                </div>
             </div>
 
             <div class="blog-content">
-                <h3>Responsible AI is Not Optional</h3>
-                <p>In the rush to build powerful models, ethics is often an afterthought. At Ngao Labs, we introduce responsible AI concepts in Week 1 and revisit them in Week 9.</p>
+                <blockquote>
+                    <i class="fas fa-quote-left"></i>
+                    "The power of AI comes with a profound responsibility. We aren't just teaching code; we are teaching the stewardship of data."
+                </blockquote>
 
-                <p>We challenge our learners to ask difficult questions:</p>
+                <h3>Responsible AI is Not Optional</h3>
+                <p>In the global rush to build increasingly powerful models, ethics is often relegated to an afterthought—a box to be checked at the end of a project. At Ngao Labs, we've flipped this script. We introduce responsible AI concepts in <strong>Week 1</strong> and weave them through every subsequent module until graduation.</p>
+
+                <p>We challenge our learners to look beyond the F1 scores and RMSE values to ask the difficult, human questions that truly define a model's success:</p>
+                
                 <ul>
-                    <li>Does this dataset represent the population fairly?</li>
-                    <li>Is the model reinforcing existing social biases?</li>
-                    <li>How do we protect user privacy?</li>
+                    <li><strong>Representational Fairness:</strong> Does this dataset represent the diversity of the population fairly, or is it skewed toward a specific demographic?</li>
+                    <li><strong>Historical Bias:</strong> Is the model simply reinforcing existing social inequities present in historical data?</li>
+                    <li><strong>Privacy by Design:</strong> How are we protecting the identity and dignity of the individuals behind the data points?</li>
                 </ul>
 
-                <p>As we prepare to incubate projects, we ensure that every solution is vetted not just for accuracy (F1 score/RMSE), but for fairness. We are building the next generation of <em>ethical</em> tech leaders.</p>
+                <h3>From Theory to Practice</h3>
+                <p>As we prepare to transition our top capstone projects into the <strong>Incubation Programme</strong>, fairness vetting becomes a hard requirement. A model that is 99% accurate but discriminates against a specific group is, by our standards, a failure.</p>
+
+                <p>By embedding these principles into our peer-to-peer learning model, we are ensuring that the next wave of African tech leaders doesn't just build faster systems—they build <em>better</em> ones.</p>
+
+                <div class="blog-share">
+                    <span class="share-title">Share this article</span>
+                    <div class="share-buttons">
+                        <a href="#" class="share-btn"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="share-btn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="share-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="share-btn"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
             </div>
+        </div>
+    </article>
+
+    <section class="blog-newsletter container">
+        <div class="blog-newsletter-content">
+            <h3>Stay Updated</h3>
+            <p>Join 200+ tech leaders receiving our weekly insights on AI and Data Science in Africa.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
         </div>
     </section>
 

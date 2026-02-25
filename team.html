@@ -18,7 +18,7 @@
     <meta property="og:url" content="https://ngaolabs.org/team">
     <meta property="og:title" content="Our Team - Ngao Labs">
     <meta property="og:description" content="Meet the Ngao Labs team - visionaries, leaders, and mentors driving our mission to bridge Kenya's digital skills gap.">
-    <meta property="og:image" content="https://ngaolabs.org/images/logo-full.png">
+    <meta property="og:image" content="https://ngaolabs.org/images/logo-full.webp">
     <meta property="og:site_name" content="Ngao Labs">
     
     <!-- Twitter Card -->
@@ -27,13 +27,13 @@
     <meta name="twitter:url" content="https://ngaolabs.org/team">
     <meta name="twitter:title" content="Our Team - Ngao Labs">
     <meta name="twitter:description" content="Meet the Ngao Labs team - visionaries, leaders, and mentors driving our mission to bridge Kenya's digital skills gap.">
-    <meta name="twitter:image" content="https://ngaolabs.org/images/logo-full.png">
+    <meta name="twitter:image" content="https://ngaolabs.org/images/logo-full.webp">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://ngaolabs.org/team">
     
     <title>Our Team - Ngao Labs</title>
-    <link rel="icon" type="image/png" href="images/logo1.png">
+    <link rel="icon" type="image/webp" href="images/logo1.webp">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,6 +44,12 @@
     <link rel="stylesheet" href="css/animations.css?v=20260109">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -55,7 +61,10 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2><a href="/">Ngao Labs</a></h2>
+                <a href="/">
+                    <img src="images/logo1.webp" alt="Ngao Labs" class="logo-mark">
+                    <span class="logo-text">Ngao Labs</span>
+                </a>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
@@ -65,7 +74,7 @@
                 <li class="nav-item"><a href="/#testimonials" class="nav-link">Benefits</a></li>
                 <li class="nav-item"><a href="/resources" class="nav-link">Resources</a></li>
                 <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
-                <li class="nav-item"><a href="/apply" class="nav-link apply-btn">Apply Now</a></li>
+                <li class="nav-item"><a href="/apply" class="nav-link apply-btn">Cohort 3 Waitlist</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -96,7 +105,7 @@
                     <div class="team-grid">
                     <div class="team-member">
                         <div class="member-image">
-                            <img src="images/lameckagasa.jpg" alt="Lameck Agasa">
+                            <img src="images/lameckagasa.webp" alt="Lameck Agasa">
                         </div>
                         <h4>Lameck Agasa</h4>
                         <p class="member-role">Chairman of the Board</p>
@@ -104,7 +113,7 @@
                     </div>
                     <div class="team-member">
                         <div class="member-image">
-                            <img src="images/fredmonari.jpg" alt="Dr. Fred Monari">
+                            <img src="images/fredmonari.webp" alt="Dr. Fred Monari">
                         </div>
                         <h4>Dr. Fred Monari</h4>
                         <p class="member-role">Treasurer</p>
@@ -112,7 +121,7 @@
                     </div>
                     <div class="team-member">
                         <div class="member-image">
-                            <img src="images/judithmwaniki.jpeg" alt="Judith Ng'endo">
+                            <img src="images/judithmwaniki.webp" alt="Judith Ng'endo">
                         </div>
                         <h4>Judith Ng'endo</h4>
                         <p class="member-role">Secretary</p>
@@ -120,7 +129,7 @@
                     </div>
                     <div class="team-member">
                         <div class="member-image">
-                            <img src="images/jebiwotdoris.jpg" alt="Doris Jebiwot">
+                            <img src="images/jebiwotdoris.webp" alt="Doris Jebiwot">
                         </div>
                         <h4>Doris Jebiwot</h4>
                         <p class="member-role">Board Member</p>
@@ -128,7 +137,7 @@
                     </div>
                     <div class="team-member">
                         <div class="member-image">
-                            <img src="images/kelvinwarukenya.jpg" alt="Kelvin Warukenya">
+                            <img src="images/kelvinwarukenya.webp" alt="Kelvin Warukenya">
                         </div>
                         <h4>Kelvin Warukenya</h4>
                         <p class="member-role">Board Member</p>
@@ -136,7 +145,7 @@
                     </div>
                     <div class="team-member">
                         <div class="member-image">
-                            <img src="images/oyoriobegi.png" alt="Oyori Obegi">
+                            <img src="images/oyoriobegi.webp" alt="Oyori Obegi">
                         </div>
                         <h4>Oyori Obegi</h4>
                         <p class="member-role">Founder & CEO</p>
@@ -155,7 +164,7 @@
                 <div class="team-grid">
                     <div class="team-member">
                         <div class="member-image">
-                            <img src="images/oyoriobegi.png" alt="Oyori Obegi">
+                            <img src="images/oyoriobegi.webp" alt="Oyori Obegi">
                         </div>
                         <h4>Oyori Obegi</h4>
                         <p class="member-role">Founder & CEO</p>
@@ -163,7 +172,7 @@
                     </div>
                     <div class="team-member">
                         <div class="member-image">
-                            <img src="images/maggie.jpg" alt="Margaret Wangari">
+                            <img src="images/maggie.webp" alt="Margaret Wangari">
                         </div>
                         <h4>Margaret Wangari</h4>
                         <p class="member-role">Events & Community Engagement Lead</p>
@@ -171,7 +180,7 @@
                     </div>
                     <div class="team-member">
                         <div class="member-image">
-                            <img src="images/BildadOndago.jpg" alt="Bildad Ondago">
+                            <img src="images/BildadOndago.webp" alt="Bildad Ondago">
                         </div>
                         <h4>Bildad Ondago</h4>
                         <p class="member-role">Legal Advisor</p>
@@ -189,7 +198,7 @@
                 <div class="team-grid">
                     <div class="team-member">
                         <div class="member-image">
-                            <img src="images/sospeter.jpg" alt="Sospeter Litala">
+                            <img src="images/sospeter.webp" alt="Sospeter Litala">
                         </div>
                         <h4>Sospeter Litala</h4>
                         <p class="member-role">Strategic Advisor</p>
@@ -207,7 +216,7 @@
                 <div class="team-grid">
                     <div class="team-member">
                         <div class="member-image">
-                            <img src="images/barbara.jpeg" alt="Barbara Wangui">
+                            <img src="images/barbara.webp" alt="Barbara Wangui">
                         </div>
                         <h4>Barbara Wangui</h4>
                         <p class="member-role">Graphic Design & Creative</p>
@@ -215,7 +224,7 @@
                     </div>
                     <div class="team-member">
                         <div class="member-image">
-                            <img src="images/sam.jpeg" alt="Samwel Njuguna">
+                            <img src="images/sam.webp" alt="Samwel Njuguna">
                         </div>
                         <h4>Samwel Njuguna</h4>
                         <p class="member-role">Learning Coordinator</p>
@@ -233,7 +242,7 @@
                 <div class="team-grid">
                     <div class="team-member">
                         <div class="member-image">
-                            <img src="images/diana.jpeg" alt="Diana Auma">
+                            <img src="images/diana.webp" alt="Diana Auma">
                         </div>
                         <h4>Diana Auma</h4>
                         <p class="member-role">Technical Mentor / Trainer</p>
@@ -241,7 +250,7 @@
                     </div>
                     <div class="team-member">
                         <div class="member-image">
-                            <img src="images/elsie.jpeg" alt="Elsie Lovell Kiprop">
+                            <img src="images/elsie.webp" alt="Elsie Lovell Kiprop">
                         </div>
                             <h4>Elsie Lovell Kiprop</h4>
                         <p class="member-role">Technical Mentor / Trainer</p>
@@ -279,7 +288,7 @@
                 <div class="footer-section">
                     <h4>Program</h4>
                     <ul>
-                        <li><a href="/apply">Apply Now</a></li>
+                        <li><a href="/apply">Cohort 3 Waitlist</a></li>
                         <li><a href="/#program">Curriculum</a></li>
                         <li><a href="/#testimonials">Benefits</a></li>
                         <li><a href="/resources">Community Updates</a></li>

@@ -18,7 +18,7 @@
     <meta property="og:url" content="https://ngaolabs.org/legal">
     <meta property="og:title" content="Terms & Privacy - Ngao Labs">
     <meta property="og:description" content="Data Privacy & Protection Statement and Terms of Participation & Community Guidelines for Ngao Labs Initiative.">
-    <meta property="og:image" content="https://ngaolabs.org/images/logo-full.png">
+    <meta property="og:image" content="https://ngaolabs.org/images/logo-full.webp">
     <meta property="og:site_name" content="Ngao Labs">
     
     <!-- Twitter Card -->
@@ -27,13 +27,13 @@
     <meta name="twitter:url" content="https://ngaolabs.org/legal">
     <meta name="twitter:title" content="Terms & Privacy - Ngao Labs">
     <meta name="twitter:description" content="Data Privacy & Protection Statement and Terms of Participation & Community Guidelines for Ngao Labs Initiative.">
-    <meta name="twitter:image" content="https://ngaolabs.org/images/logo-full.png">
+    <meta name="twitter:image" content="https://ngaolabs.org/images/logo-full.webp">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://ngaolabs.org/legal">
     
     <title>Terms & Privacy - Ngao Labs</title>
-    <link rel="icon" type="image/png" href="images/logo1.png">
+    <link rel="icon" type="image/webp" href="images/logo1.webp">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     
     <!-- Preconnect for performance -->
@@ -42,6 +42,12 @@
     
     <link rel="stylesheet" href="css/style.css?v=20260109">
     <link rel="stylesheet" href="css/legal.css?v=20260109">
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -54,7 +60,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="/">
-                    <img src="images/logo-mark.png" alt="Ngao Labs" class="logo-mark">
+                    <img src="images/logo1.webp" alt="Ngao Labs" class="logo-mark">
                     <span class="logo-text">Ngao Labs</span>
                 </a>
             </div>
@@ -66,7 +72,7 @@
                 <a href="/resources" class="nav-link">Resources</a>
                 <a href="/contact" class="nav-link">Contact</a>
                 <a href="/legal" class="nav-link active">Terms & Privacy</a>
-                <a href="/apply" class="nav-link apply-btn">Apply Now</a>
+                <a href="/apply" class="nav-link apply-btn">Waitlist</a>
             </div>
         </div>
     </nav>
@@ -367,7 +373,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="images/logo-mark.png" alt="Ngao Labs" class="logo-mark">
+                        <img src="images/logo1.webp" alt="Ngao Labs" class="logo-mark">
                         <span class="logo-text">Ngao Labs</span>
                     </div>
                     <p>Bridging Kenya's digital skills gap through peer-to-peer learning.</p>

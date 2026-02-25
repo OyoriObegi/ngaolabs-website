@@ -18,7 +18,7 @@
     <meta property="og:url" content="https://ngaolabs.org/blog/data-visualization">
     <meta property="og:title" content="Communicating Insights: The Art of Visualization">
     <meta property="og:description" content="Best practices for dashboarding and storytelling with data, a core focus of Week 3 in our program.">
-    <meta property="og:image" content="https://ngaolabs.org/images/communicating.jpg">
+    <meta property="og:image" content="https://ngaolabs.org/images/communicating.webp">
     <meta property="og:site_name" content="Ngao Labs">
     
     <!-- Twitter Card -->
@@ -27,13 +27,13 @@
     <meta name="twitter:url" content="https://ngaolabs.org/blog/data-visualization">
     <meta name="twitter:title" content="Communicating Insights: The Art of Visualization">
     <meta name="twitter:description" content="Best practices for dashboarding and storytelling with data, a core focus of Week 3 in our program.">
-    <meta name="twitter:image" content="https://ngaolabs.org/images/communicating.jpg">
+    <meta name="twitter:image" content="https://ngaolabs.org/images/communicating.webp">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://ngaolabs.org/blog/data-visualization">
     
     <title>Communicating Insights: The Art of Visualization - Ngao Labs</title>
-    <link rel="icon" type="image/png" href="../images/logo1.png">
+    <link rel="icon" type="image/webp" href="../images/logo1.webp">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     
     <!-- Preconnect for performance -->
@@ -42,98 +42,12 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
     <link rel="stylesheet" href="../css/style.css?v=20260109">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/blog.css?v=20260109">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .blog-post {
-            padding: 80px 0;
-            background: var(--white);
-        }
-        .blog-header {
-            text-align: center;
-            margin-bottom: 3rem;
-            padding-bottom: 2rem;
-            border-bottom: 2px solid #e5e7eb;
-        }
-        .blog-meta {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1rem;
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-        .blog-meta span {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .blog-title {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-        .blog-hero {
-            width: 100%;
-            height: 400px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            border-radius: 15px;
-            margin-bottom: 3rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 4rem;
-        }
-        .blog-content {
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.8;
-            color: var(--text);
-        }
-        .blog-content h3 {
-            color: var(--primary);
-            font-size: 1.75rem;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        .blog-content h4 {
-            color: var(--primary);
-            font-size: 1.4rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-        .blog-content p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-        }
-        .blog-content ul, .blog-content ol {
-            margin: 1.5rem 0;
-            padding-left: 2rem;
-        }
-        .blog-content li {
-            margin-bottom: 0.75rem;
-            font-size: 1.1rem;
-        }
-        .blog-content strong {
-            color: var(--primary);
-            font-weight: 600;
-        }
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--primary);
-            margin-bottom: 2rem;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .back-link:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
+    <div class="reading-progress"></div>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWCD22DH"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -143,17 +57,17 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2><a href="/">Ngao Labs</a></h2>
+                <a href="/">
+                    <img src="../images/logo1.webp" alt="Ngao Labs" class="logo-mark">
+                    <span class="logo-text">Ngao Labs</span>
+                </a>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="/#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="/resources" class="nav-link active">Resources</a></li>
                 <li class="nav-item"><a href="/team" class="nav-link">Team</a></li>
-                <li class="nav-item"><a href="/#program" class="nav-link">Program</a></li>
-                <li class="nav-item"><a href="/#testimonials" class="nav-link">Benefits</a></li>
-                <li class="nav-item"><a href="/resources" class="nav-link">Resources</a></li>
                 <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
-                <li class="nav-item"><a href="/apply" class="nav-link apply-btn">Apply Now</a></li>
+                <li class="nav-item"><a href="/apply" class="nav-link apply-btn">Cohort 3 Waitlist</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -164,37 +78,71 @@
     </nav>
 
     <!-- Blog Post -->
-    <section class="blog-post">
-        <div class="container">
+    <article class="blog-post">
+        <div class="blog-container">
             <a href="/resources" class="back-link">
                 <i class="fas fa-arrow-left"></i> Back to Resources
             </a>
             
-            <div class="blog-header">
+            <header class="blog-header">
                 <div class="blog-meta">
                     <span><i class="fas fa-calendar"></i> November 15, 2025</span>
                     <span><i class="fas fa-tag"></i> Learning Resource</span>
+                    <span><i class="fas fa-clock"></i> 5 min read</span>
                 </div>
                 <h1 class="blog-title">Communicating Insights: The Art of Visualization</h1>
-            </div>
+                <p class="blog-excerpt">Data is only as powerful as your ability to communicate it. Learn the core principles of effective storytelling with data.</p>
+            </header>
 
             <div class="blog-hero">
-                <i class="fas fa-chart-bar"></i>
+                <img src="../images/communicating.webp" alt="Vibrant data visualization dashboard" loading="lazy">
+                <div class="blog-hero-overlay">
+                    <i class="fas fa-chart-bar blog-hero-icon"></i>
+                </div>
             </div>
 
             <div class="blog-content">
-                <h3>Don't Just Show Data—Tell a Story</h3>
-                <p>One of the core modules in Week 3 of our program focuses on Data Visualization. A common mistake junior analysts make is over-complicating their charts.</p>
+                <blockquote>
+                    <i class="fas fa-quote-left"></i>
+                    "The goal is to turn data into information, and information into insight."
+                </blockquote>
 
-                <h4>3 Principles We Teach at Ngao Labs:</h4>
+                <h3>Don't Just Show Data—Tell a Story</h3>
+                <p>One of the core modules in <strong>Week 3</strong> of our program focuses on Data Visualization. A common mistake junior analysts make is over-complicating their charts, assuming that complexity equals competence. In reality, the most skilled analysts are those who can distill massive datasets into clear, actionable visuals.</p>
+
+                <h3>3 Principles We Teach at Ngao Labs</h3>
+                
+                <p>We train our learners to follow a "Communication First" approach using industry-standard libraries like <strong>Matplotlib</strong> and <strong>Seaborn</strong>:</p>
+
                 <ol>
-                    <li><strong>Know Your Audience:</strong> A technical stakeholder needs different charts than a business executive.</li>
-                    <li><strong>Less is More:</strong> Remove "chart junk." If a gridline doesn't add information, delete it.</li>
-                    <li><strong>Color with Purpose:</strong> Use color to highlight the insight, not just to make the chart look pretty.</li>
+                    <li><strong>Know Your Audience:</strong> A technical stakeholder needs to see the distribution and variance (technical charts), while a business executive needs to see the trend and the "so what" (impact charts).</li>
+                    <li><strong>Less is More:</strong> We teach the concept of "Data-Ink Ratio." Remove every element that doesn't add new information. If a gridline, background color, or 3D effect doesn't help the user understand the data faster, delete it.</li>
+                    <li><strong>Color with Purpose:</strong> Color shouldn't be used to make a chart "pretty." It should be used to draw the eye to the most important insight or to categorize data points meaningfully.</li>
                 </ol>
 
-                <p>We use libraries like Matplotlib and Seaborn to turn raw numbers into compelling narratives that drive decision-making.</p>
+                <p>By mastering these principles, our graduates don't just produce reports—they drive the decision-making processes of the organizations they join.</p>
+
+                <div class="blog-share">
+                    <span class="share-title">Share these tips</span>
+                    <div class="share-buttons">
+                        <a href="#" class="share-btn"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="share-btn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="share-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="share-btn"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
             </div>
+        </div>
+    </article>
+
+    <section class="blog-newsletter container">
+        <div class="blog-newsletter-content">
+            <h3>Master Data Storytelling</h3>
+            <p>Get monthly visualization tips and case studies from our curriculum team.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
         </div>
     </section>
 

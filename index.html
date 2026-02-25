@@ -20,7 +20,7 @@
 	<meta property="og:url" content="https://ngaolabs.org/">
 	<meta property="og:title" content="Ngao Labs - Data Science & Tech Training">
 	<meta property="og:description" content="Join our community-led, peer-to-peer data science and tech training programs.">
-	<meta property="og:image" content="https://ngaolabs.org/images/logo-full.png">
+	<meta property="og:image" content="https://ngaolabs.org/images/logo-full.webp">
 	<meta property="og:site_name" content="Ngao Labs">
 	
 	<!-- Twitter Card -->
@@ -29,13 +29,13 @@
 	<meta name="twitter:url" content="https://ngaolabs.org/">
 	<meta name="twitter:title" content="Ngao Labs - Data Science & Tech Training">
 	<meta name="twitter:description" content="Join our community-led, peer-to-peer data science and tech training programs.">
-	<meta name="twitter:image" content="https://ngaolabs.org/images/logo-full.png">
+	<meta name="twitter:image" content="https://ngaolabs.org/images/logo-full.webp">
 	
 	<!-- Canonical URL -->
 	<link rel="canonical" href="https://ngaolabs.org/">
 	
 	<title>Ngao Labs - Data Science & Tech Training Initiative</title>
-	<link rel="icon" type="image/png" href="images/logo1.png">
+	<link rel="icon" type="image/webp" href="images/logo1.webp">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<!-- Preconnect for performance -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,6 +46,50 @@
 	<link rel="stylesheet" href="css/animations.css?v=20260109">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	
+	<script>
+		// Immediate theme application to prevent FOUT
+		(function() {
+			const theme = localStorage.getItem('theme') || 'light';
+			document.documentElement.setAttribute('data-theme', theme);
+		})();
+	</script>
+
+	<!-- Schema.org JSON-LD for SEO -->
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@type": "EducationalOrganization",
+	  "name": "Ngao Labs",
+	  "url": "https://ngaolabs.org/",
+	  "logo": "https://ngaolabs.org/images/logo-full.webp",
+	  "description": "Ngao Labs is a community-led, tuition-free data science and tech training initiative in Kenya.",
+	  "address": {
+		"@type": "PostalAddress",
+		"addressLocality": "Nairobi",
+		"addressCountry": "KE"
+	  },
+	  "sameAs": [
+		"https://x.com/Ngao_Labs",
+		"https://www.linkedin.com/company/ngao-labs/"
+	  ],
+	  "hasOfferCatalog": {
+		"@type": "OfferCatalog",
+		"name": "Data Science & AI Training",
+		"itemListElement": [
+		  {
+			"@type": "Course",
+			"name": "Foundations of Data Science & AI",
+			"description": "A 10-week intensive program covering Python, Data Analysis, and Machine Learning.",
+			"provider": {
+			  "@type": "Organization",
+			  "name": "Ngao Labs"
+			}
+		  }
+		]
+	  }
+	}
+	</script>
 </head>
 <body>
 	<!-- Google Tag Manager (noscript) -->
@@ -60,7 +104,10 @@
 	<nav class="navbar" role="navigation" aria-label="Main navigation">
 		<div class="nav-container">
 			<div class="nav-logo">
-				<h2>Ngao Labs</h2>
+				<a href="/">
+					<img src="images/logo1.webp" alt="Ngao Labs" class="logo-mark">
+					<span class="logo-text">Ngao Labs</span>
+				</a>
 			</div>
 			<ul class="nav-menu">
 				<li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
@@ -70,7 +117,7 @@
 				<li class="nav-item"><a href="#testimonials" class="nav-link">Benefits</a></li>
 				<li class="nav-item"><a href="/resources" class="nav-link">Resources</a></li>
 				<li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
-				<li class="nav-item"><a href="#" class="nav-link apply-btn disabled">Applications Closed</a></li>
+				<li class="nav-item"><a href="/apply" class="nav-link apply-btn">Cohort 3 Waitlist</a></li>
 			</ul>
 			<button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
 				<span class="bar"></span>
@@ -87,15 +134,15 @@
 			<div class="hero-content">
 				<div class="hero-badge">
 					<span class="hero-badge-emoji">🚀</span>
-					<span>Cohort 2 Recruitment Closed – Sessions Begin Feb 2</span>
+					<span>Cohort 2 Sessions Underway – Join the Next Wave</span>
 				</div>
 				<h1 class="hero-title">
 					Master Data Science & AI. Tuition-Free.
 				</h1>
 				<p class="hero-subtitle">
-					Live sessions begin February 2, 2026. <strong>Status: Applications Closed - Processing.</strong>
+					Cohort 2 is currently active. <strong>Now accepting interest for Cohort 3.</strong>
 				<div class="hero-buttons">
-					<a href="#" class="btn btn-primary disabled">Applications Closed</a>
+					<a href="/apply" class="btn btn-primary">Join Cohort 3 Waitlist</a>
 					<a href="/contact" class="btn btn-secondary hero-secondary-btn">Partner with Us</a>
 					<a href="/become-a-mentor" class="btn btn-secondary hero-secondary-btn">Become a Mentor</a>
 				</div>
@@ -136,15 +183,15 @@ print(f"Projected Outcome: {impact} Lives Transformed 🚀")</code></pre>
 			<p class="partners-tagline">Building with the best.</p>
 			<div class="partners-grid">
 				<div class="partner-logo">
-					<i class="fab fa-github"></i>
+					<i class="fab fa-github" aria-hidden="true"></i>
 					<span>GitHub</span>
 				</div>
 				<div class="partner-logo">
-					<i class="fab fa-discord"></i>
+					<i class="fab fa-discord" aria-hidden="true"></i>
 					<span>Discord</span>
 				</div>
 				<div class="partner-logo">
-					<img src="images/zindi-logo.png" alt="Zindi">
+					<img src="images/zindi-logo.webp" alt="Zindi Partner Logo" loading="lazy">
 					<span>Zindi</span>
 				</div>
 			</div>
@@ -184,19 +231,19 @@ print(f"Projected Outcome: {impact} Lives Transformed 🚀")</code></pre>
 			<div class="updates-grid">
 				<div class="update-card">
 					<div class="update-icon">
-						<i class="fas fa-rocket"></i>
+						<i class="fas fa-rocket" aria-hidden="true"></i>
 					</div>
 					<h3>Launching the Incubation Programme</h3>
 					<p>We are proud to announce the next phase for our top-performing graduates. The Incubation Programme provides dedicated support, mentorship, and resources to turn capstone projects into market-ready solutions.</p>
 					<div style="margin: 1.5rem 0;">
-						<img src="images/incubation.jpg" alt="Ngao Labs Incubation Programme" loading="lazy" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+						<img src="images/incubation.webp" alt="Graduates discussing projects during the Incubation Programme" loading="lazy" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
 					</div>
 				</div>
 				<div class="update-card">
 					<h3>Celebrating Cohort 1 Success</h3>
 					<p>On December 12th, we proudly graduated 14 students from our inaugural class. These individuals successfully completed our intensive 10-week curriculum and demonstrated exceptional skill in their final capstone projects.</p>
 					<div style="margin: 1.5rem 0;">
-						<img src="images/Graduation.png" alt="Cohort 1 Graduation Ceremony" loading="lazy" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+						<img src="images/Graduation.webp" alt="Cohort 1 Graduation Ceremony" loading="lazy" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
 						<p style="text-align: center; margin-top: 0.75rem; font-style: italic; color: var(--text-light); font-size: 0.95rem;">The Class of 2025 ready to transform the tech landscape</p>
 					</div>
 					<p style="margin-top: 1rem;">Top projects from this group have now moved into the <strong>Ngao Labs Incubation Programme</strong>, demonstrating the continuity of our training pipeline from education to real-world application.</p>
@@ -374,7 +421,7 @@ print(f"Projected Outcome: {impact} Lives Transformed 🚀")</code></pre>
 				<h2>Ready to Transform Your Career?</h2>
 				<p>Join our next cohort and become part of a community that's shaping the future of data science education.</p>
 				<div class="cta-buttons">
-					<a href="#" class="btn btn-primary disabled">Applications Closed</a>
+					<a href="/apply" class="btn btn-primary">Join Cohort 3 Waitlist</a>
 					<a href="/contact" class="btn btn-secondary">Partner with Us</a>
 					<a href="/become-a-mentor" class="btn btn-secondary">Become a Mentor</a>
 				</div>
@@ -391,7 +438,7 @@ print(f"Projected Outcome: {impact} Lives Transformed 🚀")</code></pre>
 			<div class="stories-grid">
 				<div class="story-card">
 					<div class="story-avatar">
-						<img src="images/valentine.jpg" alt="Valentine Mbuthu" loading="lazy">
+						<img src="images/valentine.webp" alt="Valentine Mbuthu" loading="lazy">
 					</div>
 					<div class="story-content">
 						<p class="story-quote">"Ngao Labs stretched my analytical depth, sharpened my technical rigor and reshaped how I design data-driven, ethical solutions. I am more confident, more curious, and prepared to lead meaningful transformation through data science and innovation."</p>
@@ -403,7 +450,7 @@ print(f"Projected Outcome: {impact} Lives Transformed 🚀")</code></pre>
 				</div>
 				<div class="story-card">
 					<div class="story-avatar">
-						<img src="images/evaline.jpg" alt="Evalyne Kagendo" loading="lazy">
+						<img src="images/evaline.webp" alt="Evalyne Kagendo" loading="lazy">
 					</div>
 					<div class="story-content">
 						<p class="story-quote">"A journey of a thousand miles begins with a single step, and for me, Ngao Labs has been that crucial first stride towards becoming a data scientist. Their Foundation of Data Science and AI course has equipped me with skills, confidence, and momentum."</p>
@@ -415,7 +462,7 @@ print(f"Projected Outcome: {impact} Lives Transformed 🚀")</code></pre>
 				</div>
 				<div class="story-card">
 					<div class="story-avatar">
-						<img src="images/jude.jpg" alt="Judetadeus Masika" loading="lazy">
+						<img src="images/jude.webp" alt="Judetadeus Masika" loading="lazy">
 					</div>
 					<div class="story-content">
 						<p class="story-quote">"The Instructors at Ngao Labs break down complex tech concepts into practical, real-world learning. The program enabled me to build, deploy, and innovate."</p>
@@ -487,7 +534,7 @@ print(f"Projected Outcome: {impact} Lives Transformed 🚀")</code></pre>
 				<div class="footer-section">
 					<h4>Program</h4>
 					<ul>
-						<li><a href="/apply">Applications Closed</a></li>
+						<li><a href="/apply">Cohort 3 Waitlist</a></li>
 						<li><a href="#program">Curriculum</a></li>
 						<li><a href="#testimonials">Benefits</a></li>
 						<li><a href="/resources">Community Updates</a></li>

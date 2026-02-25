@@ -18,7 +18,7 @@
     <meta property="og:url" content="https://ngaolabs.org/become-a-mentor">
     <meta property="og:title" content="Become a Mentor - Ngao Labs">
     <meta property="og:description" content="Become a mentor at Ngao Labs and shape the next generation of African tech leaders. Join our community-driven learning initiative.">
-    <meta property="og:image" content="https://ngaolabs.org/images/logo-full.png">
+    <meta property="og:image" content="https://ngaolabs.org/images/logo-full.webp">
     <meta property="og:site_name" content="Ngao Labs">
     
     <!-- Twitter Card -->
@@ -27,13 +27,13 @@
     <meta name="twitter:url" content="https://ngaolabs.org/become-a-mentor">
     <meta name="twitter:title" content="Become a Mentor - Ngao Labs">
     <meta name="twitter:description" content="Become a mentor at Ngao Labs and shape the next generation of African tech leaders. Join our community-driven learning initiative.">
-    <meta name="twitter:image" content="https://ngaolabs.org/images/logo-full.png">
+    <meta name="twitter:image" content="https://ngaolabs.org/images/logo-full.webp">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://ngaolabs.org/become-a-mentor">
     
     <title>Become a Mentor - Ngao Labs</title>
-    <link rel="icon" type="image/png" href="images/logo1.png">
+    <link rel="icon" type="image/webp" href="images/logo1.webp">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     
     <!-- Preconnect for performance -->
@@ -45,6 +45,12 @@
     <link rel="stylesheet" href="css/animations.css?v=20260109">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -56,7 +62,10 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2><a href="index.html">Ngao Labs</a></h2>
+                <a href="/">
+                    <img src="images/logo1.webp" alt="Ngao Labs" class="logo-mark">
+                    <span class="logo-text">Ngao Labs</span>
+                </a>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -81,7 +90,7 @@
                     <a href="/contact" class="nav-link">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/apply" class="nav-link apply-btn">Apply Now</a>
+                    <a href="/apply" class="nav-link apply-btn">Waitlist</a>
                 </li>
             </ul>
             <div class="hamburger">
@@ -215,7 +224,7 @@
                 <div class="footer-section">
                     <h4>Program</h4>
                     <ul>
-                        <li><a href="/apply">Apply Now</a></li>
+                        <li><a href="/apply">Cohort 3 Waitlist</a></li>
                         <li><a href="#program">Curriculum</a></li>
                         <li><a href="#testimonials">Benefits</a></li>
                         <li><a href="/resources">Community Updates</a></li>

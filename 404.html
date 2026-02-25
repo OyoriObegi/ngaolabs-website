@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
     <title>404 - Page Not Found | Ngao Labs</title>
-    <link rel="icon" type="image/png" href="images/logo1.png">
+    <link rel="icon" type="image/webp" href="images/logo1.webp">
     <link rel="stylesheet" href="css/style.css?v=20260109">
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -15,20 +21,20 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%);
+            background: var(--bg);
             padding: 2rem;
             text-align: center;
         }
         .error-content {
             max-width: 600px;
-            color: white;
+            color: var(--text);
         }
         .error-code {
             font-size: 8rem;
             font-weight: 700;
             line-height: 1;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%);
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--accent-2) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -37,11 +43,12 @@
             font-size: 2rem;
             font-weight: 600;
             margin-bottom: 1rem;
+            color: var(--primary);
         }
         .error-description {
             font-size: 1.125rem;
             margin-bottom: 2rem;
-            opacity: 0.9;
+            color: var(--text-light);
             line-height: 1.6;
         }
         .error-actions {
@@ -55,31 +62,34 @@
             align-items: center;
             gap: 0.5rem;
             padding: 0.875rem 1.5rem;
-            border-radius: 8px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
         }
         .error-btn-primary {
-            background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--accent-2) 100%);
             color: white;
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
         }
         .error-btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+            box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4);
         }
         .error-btn-secondary {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: var(--bg-light);
+            color: var(--primary);
+            border: 1px solid var(--primary);
         }
         .error-btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.15);
+            background: var(--primary);
+            color: var(--white);
         }
         .error-icon {
             font-size: 4rem;
             margin-bottom: 1.5rem;
-            opacity: 0.7;
+            color: var(--accent);
+            opacity: 0.8;
         }
         @media (max-width: 768px) {
             .error-code {
@@ -98,29 +108,24 @@
     <div class="error-page">
         <div class="error-content">
             <div class="error-icon">
-                <i class="fas fa-compass"></i>
+                <i class="fas fa-satellite-dish" aria-hidden="true"></i>
             </div>
-            <h1 class="error-code">404</h1>
-            <h2 class="error-title">Oops! Page Not Found</h2>
+            <div class="error-code">404</div>
+            <h1 class="error-title">Page Not Found</h1>
             <p class="error-description">
-                The page you're looking for seems to have wandered off the path. Don't worry—even the best data scientists encounter missing values!
+                Oops! It seems you've drifted into uncharted territory. The page you're looking for doesn't exist or has been moved.
             </p>
             <div class="error-actions">
                 <a href="/" class="error-btn error-btn-primary">
-                    <i class="fas fa-home"></i>
-                    Go to Homepage
-                </a>
-                <a href="/apply" class="error-btn error-btn-secondary">
-                    <i class="fas fa-graduation-cap"></i>
-                    Apply Now
+                    <i class="fas fa-home"></i> Back to Home
                 </a>
                 <a href="/contact" class="error-btn error-btn-secondary">
-                    <i class="fas fa-envelope"></i>
-                    Contact Us
+                    <i class="fas fa-envelope"></i> Contact Support
                 </a>
             </div>
         </div>
     </div>
+    <script src="js/main.js?v=20260109"></script>
 </body>
 </html>
 
