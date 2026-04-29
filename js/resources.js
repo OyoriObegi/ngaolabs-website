@@ -16,10 +16,10 @@ class ResourcesManager {
                     title: 'Partnership with DataCamp',
                     description: "We're partnering with DataCamp to expand access to high-quality learning resources so our community can build stronger foundations in data and AI.",
                     imageData: null,
-                    imageUrl: 'images/incubation.webp',
+                    imageUrl: 'images/datacamp.webp',
                     linkUrl: 'https://www.datacamp.com/donates',
                     category: 'Announcement',
-                    date: '2025-11-25',
+                    date: '2026-03-16',
                     type: 'featured'
                 }
             ],
@@ -162,9 +162,9 @@ class ResourcesManager {
 
     formatDate(dateString) {
         const date = new Date(dateString);
-        return date.toLocaleDateString('en-US', {
+        return date.toLocaleDateString('en-GB', {
             year: 'numeric',
-            month: 'short',
+            month: 'long',
             day: 'numeric'
         });
     }
