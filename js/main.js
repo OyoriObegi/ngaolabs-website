@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initIntersectionObserver();
     initFAQ();
     initBackToTop();
-    initThemeToggle();
     initReadingProgress();
 });
 
@@ -24,41 +23,6 @@ function initReadingProgress() {
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const scrolled = (windowScroll / height) * 100;
         progress.style.width = scrolled + '%';
-    });
-}
-
-// Theme Toggle functionality
-function initThemeToggle() {
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', currentTheme);
-
-    const themeToggleBtn = document.createElement('button');
-    themeToggleBtn.className = 'theme-toggle';
-    themeToggleBtn.innerHTML = `
-        <i class="fas fa-moon" title="Switch to dark mode"></i>
-        <i class="fas fa-sun" title="Switch to light mode"></i>
-    `;
-    themeToggleBtn.setAttribute('aria-label', 'Toggle theme');
-
-    const navContainer = document.querySelector('.nav-container');
-    const hamburger = document.querySelector('.hamburger');
-    
-    if (navContainer) {
-        // Insert before hamburger or as last item
-        if (hamburger) {
-            navContainer.insertBefore(themeToggleBtn, hamburger);
-        } else {
-            navContainer.appendChild(themeToggleBtn);
-        }
-    }
-
-    themeToggleBtn.addEventListener('click', () => {
-        const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
-        
-        // Show feedback toast
-        showToast(`Switched to ${theme} mode`, 'info');
     });
 }
 

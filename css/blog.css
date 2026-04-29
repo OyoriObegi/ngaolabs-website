@@ -263,20 +263,6 @@
     opacity: 0.9;
 }
 
-/* Dark Mode Overrides */
-[data-theme="dark"] .blog-hero {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
-
-[data-theme="dark"] .share-btn {
-    background: #1E293B;
-    border-color: rgba(255,255,255,0.05);
-}
-
-[data-theme="dark"] .blog-header {
-    border-bottom-color: #1E293B;
-}
-
 @media (max-width: 768px) {
     .blog-post { padding: 100px 0 60px; }
     .blog-hero { border-radius: 16px; margin-bottom: 2.5rem; }
