@@ -6,7 +6,7 @@ html {
 
 /* Global transition for interactive elements */
 a, button, input, select, textarea, .btn, .card, .nav-link {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* Hover animations for cards and interactive elements */
@@ -15,23 +15,22 @@ a, button, input, select, textarea, .btn, .card, .nav-link {
 .testimonial-card:hover,
 .article-card:hover,
 .featured-article:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 /* Button hover animations */
 .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
 }
 
 .btn-primary:hover {
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    box-shadow: var(--shadow-md);
 }
 
 /* Navigation link hover effects */
 .nav-link:hover {
-    transform: translateY(-1px);
+    transform: none;
 }
 
 .nav-link::after {
@@ -40,96 +39,90 @@ a, button, input, select, textarea, .btn, .card, .nav-link {
 
 /* Hero section animations */
 .hero-title {
-    animation: fadeInUp 1s ease-out 0.2s both;
+    animation: fadeInUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.06s both;
 }
 
 .hero-subtitle {
-    animation: fadeInUp 1s ease-out 0.4s both;
+    animation: fadeInUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.14s both;
 }
 
 .hero-buttons {
-    animation: fadeInUp 1s ease-out 0.6s both;
+    animation: fadeInUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.22s both;
 }
 
 .hero-graphic i {
-    animation: float 6s ease-in-out infinite;
-}
-
-.hero-graphic i:nth-child(2) {
-    animation-delay: 2s;
-}
-
-.hero-graphic i:nth-child(3) {
-    animation-delay: 4s;
+    animation: none;
 }
 
 /* Section header animations */
 .section-header {
-    animation: fadeInUp 0.8s ease-out both;
+    animation: fadeInSimple 0.75s ease-out both;
 }
 
 .section-header h2 {
-    animation: slideInLeft 0.8s ease-out 0.2s both;
+    animation: none;
 }
 
 .section-header p {
-    animation: slideInRight 0.8s ease-out 0.4s both;
+    animation: none;
 }
 
 /* Card animations with staggered delays */
 .about-card {
-    animation: fadeInUp 0.8s ease-out both;
+    animation: fadeInSimple 0.7s ease-out both;
 }
 
-.about-card:nth-child(1) { animation-delay: 0.1s; }
-.about-card:nth-child(2) { animation-delay: 0.3s; }
-.about-card:nth-child(3) { animation-delay: 0.5s; }
+.about-card:nth-child(1) { animation-delay: 0.05s; }
+.about-card:nth-child(2) { animation-delay: 0.08s; }
+.about-card:nth-child(3) { animation-delay: 0.11s; }
 
 .week-card {
-    animation: fadeInUp 0.8s ease-out both;
+    animation: fadeInSimple 0.7s ease-out both;
 }
 
-.week-card:nth-child(1) { animation-delay: 0.1s; }
-.week-card:nth-child(2) { animation-delay: 0.2s; }
-.week-card:nth-child(3) { animation-delay: 0.3s; }
-.week-card:nth-child(4) { animation-delay: 0.4s; }
-.week-card:nth-child(5) { animation-delay: 0.5s; }
+.week-card:nth-child(1) { animation-delay: 0.05s; }
+.week-card:nth-child(2) { animation-delay: 0.07s; }
+.week-card:nth-child(3) { animation-delay: 0.09s; }
+.week-card:nth-child(4) { animation-delay: 0.11s; }
+.week-card:nth-child(5) { animation-delay: 0.13s; }
 
 .program-features .feature {
-    animation: fadeInUp 0.8s ease-out both;
+    animation: fadeInSimple 0.7s ease-out both;
 }
 
-.program-features .feature:nth-child(1) { animation-delay: 0.1s; }
-.program-features .feature:nth-child(2) { animation-delay: 0.2s; }
-.program-features .feature:nth-child(3) { animation-delay: 0.3s; }
-.program-features .feature:nth-child(4) { animation-delay: 0.4s; }
+.program-features .feature:nth-child(1) { animation-delay: 0.05s; }
+.program-features .feature:nth-child(2) { animation-delay: 0.07s; }
+.program-features .feature:nth-child(3) { animation-delay: 0.09s; }
+.program-features .feature:nth-child(4) { animation-delay: 0.11s; }
 
 .testimonial-card {
-    animation: fadeInUp 0.8s ease-out both;
+    animation: fadeInSimple 0.7s ease-out both;
 }
 
-.testimonial-card:nth-child(1) { animation-delay: 0.1s; }
-.testimonial-card:nth-child(2) { animation-delay: 0.3s; }
-.testimonial-card:nth-child(3) { animation-delay: 0.5s; }
+.testimonial-card:nth-child(1) { animation-delay: 0.05s; }
+.testimonial-card:nth-child(2) { animation-delay: 0.08s; }
+.testimonial-card:nth-child(3) { animation-delay: 0.11s; }
 
 /* Icon animations */
 .card-icon {
-    animation: scaleIn 0.6s ease-out 0.3s both;
+    animation: none;
 }
 
 .feature i {
-    animation: bounceIn 0.8s ease-out 0.5s both;
+    animation: none;
 }
 
 /* Social media link animations */
 .social-links a {
-    animation: fadeInUp 0.8s ease-out both;
+    animation: none;
 }
 
-.social-links a:nth-child(1) { animation-delay: 0.1s; }
-.social-links a:nth-child(2) { animation-delay: 0.2s; }
-.social-links a:nth-child(3) { animation-delay: 0.3s; }
-.social-links a:nth-child(4) { animation-delay: 0.4s; }
+.social-links a:nth-child(1),
+.social-links a:nth-child(2),
+.social-links a:nth-child(3),
+.social-links a:nth-child(4) {
+    animation-delay: 0s;
+}
 
 /* Form animations */
 .form-section {
@@ -188,10 +181,15 @@ a, button, input, select, textarea, .btn, .card, .nav-link {
     to { opacity: 1; }
 }
 
+@keyframes fadeInSimple {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(18px);
     }
     to {
         opacity: 1;
@@ -338,7 +336,7 @@ a, button, input, select, textarea, .btn, .card, .nav-link {
         transform: translateY(0px);
     }
     50% {
-        transform: translateY(-20px);
+        transform: translateY(-6px);
     }
 }
 
@@ -479,12 +477,13 @@ a, button, input, select, textarea, .btn, .card, .nav-link {
 }
 
 /* Focus animations for accessibility */
-.btn:focus,
-.nav-link:focus,
-input:focus,
-select:focus,
-textarea:focus {
-    animation: pulse 0.3s ease-in-out;
+.btn:focus-visible,
+.nav-link:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--primary-light, #38bdf8);
+    outline-offset: 2px;
 }
 
 /* Error state animations */

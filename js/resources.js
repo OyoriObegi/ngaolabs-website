@@ -13,11 +13,11 @@ class ResourcesManager {
             featured: [
                 {
                     id: 'f1',
-                    title: 'Launching the Ngao Labs Incubation Programme',
-                    description: 'We are proud to announce the next phase for our top-performing graduates. The Incubation Programme provides dedicated support, mentorship, and resources to turn capstone projects into market-ready solutions.',
+                    title: 'Partnership with DataCamp',
+                    description: "We're partnering with DataCamp to expand access to high-quality learning resources so our community can build stronger foundations in data and AI.",
                     imageData: null,
                     imageUrl: 'images/incubation.webp',
-                    linkUrl: 'blog/incubation-programme.html',
+                    linkUrl: 'https://www.datacamp.com/donates',
                     category: 'Announcement',
                     date: '2025-11-25',
                     type: 'featured'
@@ -98,8 +98,8 @@ class ResourcesManager {
         if (items.length === 0) {
             container.innerHTML = `
                 <div class="empty-state">
-                    <i class="fas fa-inbox"></i>
                     <h3>No content yet</h3>
+                    <p>Check back soon for updates.</p>
                 </div>
             `;
             return;
@@ -116,7 +116,7 @@ class ResourcesManager {
         } else if (item.imageUrl) {
             imageHtml = `<img src="${item.imageUrl}" alt="${item.title}" onerror="this.style.display='none'">`;
         } else {
-            imageHtml = `<i class="fas fa-chart-line"></i>`;
+            imageHtml = `<div class="resource-image-placeholder" aria-hidden="true"></div>`;
         }
 
         if (item.type === 'featured') {
@@ -132,7 +132,7 @@ class ResourcesManager {
                         <div class="resource-footer">
                             <span class="resource-date">${this.formatDate(item.date)}</span>
                             <a href="${item.linkUrl}" class="read-more">
-                                Read Full Story <i class="fas fa-arrow-left"></i>
+                                Read full story
                             </a>
                         </div>
                     </div>
@@ -152,7 +152,7 @@ class ResourcesManager {
                     <div class="resource-footer">
                         <span class="resource-date">${this.formatDate(item.date)}</span>
                         <a href="${item.linkUrl}" class="read-more">
-                            Read More <i class="fas fa-arrow-right"></i>
+                            Read more
                         </a>
                     </div>
                 </div>

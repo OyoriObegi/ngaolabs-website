@@ -30,7 +30,7 @@ function initReadingProgress() {
 function initBackToTop() {
     const backToTopBtn = document.createElement('button');
     backToTopBtn.className = 'back-to-top';
-    backToTopBtn.innerHTML = '<i class="fas fa-chevron-up"></i>';
+    backToTopBtn.innerHTML = '<span class="back-to-top-label" aria-hidden="true">Top</span>';
     backToTopBtn.setAttribute('aria-label', 'Back to top');
     document.body.appendChild(backToTopBtn);
 
@@ -136,17 +136,6 @@ function initSmoothScrolling() {
 
 // Scroll effects and animations
 function initScrollEffects() {
-    // Parallax effect for hero section
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const hero = document.querySelector('.hero');
-        
-        if (hero) {
-            const rate = scrolled * -0.5;
-            hero.style.transform = `translateY(${rate}px)`;
-        }
-    });
-
     // Counter animation for stats
     const counters = document.querySelectorAll('.stat-number');
     const animateCounters = () => {
@@ -423,11 +412,11 @@ function initNewsletterSignup() {
             if (validateEmail(emailInput.value)) {
                 // Show loading state
                 submitBtn.disabled = true;
-                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Subscribing...';
+                submitBtn.innerHTML = 'Subscribing…';
                 
                 // Simulate API call
                 setTimeout(() => {
-                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Subscribed!';
+                    submitBtn.innerHTML = 'Subscribed';
                     submitBtn.classList.add('btn-success');
                     emailInput.value = '';
                     
@@ -461,9 +450,6 @@ function showToast(message, type = 'info') {
     const toast = document.createElement('div');
     toast.className = `toast toast-${type}`;
     toast.innerHTML = `
-        <div class="toast-icon">
-            <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i>
-        </div>
         <div class="toast-content">${message}</div>
     `;
     
@@ -619,5 +605,4 @@ function initFAQ() {
 }
 
 // Console welcome message
-console.log('%cWelcome to Ngao Labs! 🚀', 'color: #667eea; font-size: 20px; font-weight: bold;');
 console.log('%cWe\'re building the future of data science education together.', 'color: #4a5568; font-size: 14px;');
