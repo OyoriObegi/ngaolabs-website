@@ -140,21 +140,38 @@ function initScrollEffects() {
     const counters = document.querySelectorAll('.stat-number');
     const animateCounters = () => {
         counters.forEach(counter => {
-            const target = parseInt(counter.getAttribute('data-target') || counter.textContent.replace(/\D/g, ''));
-            const increment = target / 100;
-            let current = 0;
-            
-            const updateCounter = () => {
-                if (current < target) {
-                    current += increment;
-                    counter.textContent = Math.ceil(current) + (counter.textContent.includes('+') ? '+' : '') + (counter.textContent.includes('%') ? '%' : '');
+            const target = parseInt(counter.getAttribute('data-target') || counter.textContent.replace(/\D/g, ''), 10);
+            const suffix = counter.getAttribute('data-suffix') || (counter.textContent.includes('+') ? '+' : '') || (counter.textContent.includes('%') ? '%' : '');
+            const digitEl = counter.querySelector('.stat-digit');
+            const duration = 1200;
+            let startTime = null;
+
+            const updateCounter = (timestamp) => {
+                if (!startTime) startTime = timestamp;
+                const elapsed = timestamp - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                // Cubic ease-out deceleration
+                const ease = 1 - Math.pow(1 - progress, 3);
+                const current = Math.round(ease * target);
+
+                if (digitEl) {
+                    digitEl.textContent = current;
+                } else {
+                    counter.textContent = current + suffix;
+                }
+
+                if (progress < 1) {
                     requestAnimationFrame(updateCounter);
                 } else {
-                    counter.textContent = target + (counter.textContent.includes('+') ? '+' : '') + (counter.textContent.includes('%') ? '%' : '');
+                    if (digitEl) {
+                        digitEl.textContent = target;
+                    } else {
+                        counter.textContent = target + suffix;
+                    }
                 }
             };
-            
-            updateCounter();
+
+            requestAnimationFrame(updateCounter);
         });
     };
 

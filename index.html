@@ -154,13 +154,13 @@
 						<span class="terminal-title"># ngaolabs/main.py</span>
 					</div>
 					<div class="terminal-body">
-						<pre class="terminal-code"><code><span class="token-keyword">from</span> <span class="token-module">ngao_labs</span> <span class="token-keyword">import</span> <span class="token-class">Kenya</span>, <span class="token-class">Cohort3</span>
+						<pre class="terminal-code"><code><span class="token-keyword">from</span> <span class="token-module">ngao_labs</span> <span class="token-keyword">import</span> <span class="token-class">Kenya</span>, <span class="token-class">Cohort4</span>
 
 <span class="token-comment"># Fresh graduate. Young. Hungry. Wondering what is next.</span>
 <span class="token-variable">you</span> <span class="token-operator">=</span> <span class="token-class">Kenya</span><span class="token-punct">.</span><span class="token-func">load</span><span class="token-punct">(</span><span class="token-arg">status</span><span class="token-operator">=</span><span class="token-string">"ready"</span>, <span class="token-arg">background</span><span class="token-operator">=</span><span class="token-string">"any"</span><span class="token-punct">)</span>
 
 <span class="token-comment"># Mentors light the path. Your group finds the way.</span>
-<span class="token-variable">cohort</span> <span class="token-operator">=</span> <span class="token-class">Cohort3</span><span class="token-punct">(</span>
+<span class="token-variable">cohort</span> <span class="token-operator">=</span> <span class="token-class">Cohort4</span><span class="token-punct">(</span>
     <span class="token-arg">sessions</span><span class="token-operator">=</span><span class="token-string">"live virtual"</span>,
     <span class="token-arg">team</span><span class="token-operator">=</span><span class="token-func">choice</span><span class="token-punct">([</span><span class="token-number">2</span>, <span class="token-number">3</span>, <span class="token-number">4</span><span class="token-punct">])</span>,
     <span class="token-arg">weeks</span><span class="token-operator">=</span><span class="token-number">10</span>,
@@ -169,7 +169,7 @@
 <span class="token-comment"># Women especially encouraged to apply.</span>
 <span class="token-variable">cohort</span><span class="token-punct">.</span><span class="token-func">join_waitlist</span><span class="token-punct">(</span><span class="token-variable">you</span>, <span class="token-arg">cohort</span><span class="token-operator">=</span><span class="token-number">4</span><span class="token-punct">)</span>
 
-<span class="token-func">print</span><span class="token-punct">(</span><span class="token-string">"Cohort 3 starts Tuesday. Join the Cohort 4 waitlist."</span><span class="token-punct">)</span></code></pre>
+<span class="token-func">print</span><span class="token-punct">(</span><span class="token-string">"Cohort 4 is forming. Join the waitlist."</span><span class="token-punct">)</span></code></pre>
 					</div>
 				</div>
 			</div>
@@ -202,19 +202,40 @@
 		<div class="container">
 			<div class="stats-grid">
 				<div class="stat-item">
-					<div class="stat-number" data-target="50">0</div>
+					<div class="stat-icon-wrapper">
+						<svg class="stat-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+							<path d="M6 12v5c3 3 9 3 12 0v-5"/>
+						</svg>
+					</div>
+					<div class="stat-number" data-target="100" data-suffix="+">
+						<span class="stat-digit">0</span><span class="stat-suffix">+</span>
+					</div>
 					<div class="stat-label">Graduates Trained</div>
 				</div>
 				<div class="stat-item">
-					<div class="stat-number" data-target="10">0</div>
-					<div class="stat-label">Weeks Per Cohort</div>
-				</div>
-				<div class="stat-item">
-					<div class="stat-number" data-target="100">0</div>
+					<div class="stat-icon-wrapper">
+						<svg class="stat-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+							<path d="m9 12 2 2 4-4"/>
+						</svg>
+					</div>
+					<div class="stat-number" data-target="100" data-suffix="%">
+						<span class="stat-digit">0</span><span class="stat-suffix">%</span>
+					</div>
 					<div class="stat-label">Percent Tuition-Free</div>
 				</div>
 				<div class="stat-item">
-					<div class="stat-number stat-number--cohorts" data-target="2">0</div>
+					<div class="stat-icon-wrapper">
+						<svg class="stat-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<polygon points="12 2 2 7 12 12 22 7 12 2"/>
+							<polyline points="2 17 12 22 22 17"/>
+							<polyline points="2 12 12 17 22 12"/>
+						</svg>
+					</div>
+					<div class="stat-number stat-number--cohorts" data-target="3">
+						<span class="stat-digit">0</span>
+					</div>
 					<div class="stat-label">Completed Cohorts</div>
 				</div>
 			</div>
@@ -255,10 +276,10 @@
 			</div>
 			<div class="updates-grid">
 				<div class="update-card">
-					<h3>Celebrating Cohort 2 Success</h3>
-					<p>Our latest cohort of 36 learners just wrapped up their 10-week intensive program, presenting market-ready AI solutions to a panel of industry experts. Ready to build your future? Join our next wave.</p>
+					<h3>Celebrating Cohort 3 Success</h3>
+					<p>Our latest cohort of 55 learners just wrapped up their 10-week intensive program, presenting market-ready AI solutions to a panel of industry experts. Ready to build your future? Join our next wave.</p>
 					<div style="margin-top: 1.25rem;">
-						<img src="images/Graduation.webp" alt="Cohort 2 showcase" loading="lazy" style="width: 100%; height: auto; border-radius: 10px; border: 1px solid #e2e8f0;">
+						<img src="images/cohort3.jpg" alt="Cohort 3 showcase" loading="lazy" style="width: 100%; height: auto; border-radius: 10px; border: 1px solid #e2e8f0;">
 					</div>
 				</div>
 				<div class="update-card">

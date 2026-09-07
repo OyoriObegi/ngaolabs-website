@@ -669,37 +669,90 @@ ul {
 
 /* Stats Section */
 .stats-section {
-    padding: 32px 0 48px;
-    background: linear-gradient(160deg, #0b1324 0%, #132d53 60%, #0e1f3a 100%);
+    padding: 56px 0 64px;
+    background: linear-gradient(165deg, #070d19 0%, #0c1830 50%, #081122 100%);
     color: white;
     position: relative;
     overflow: hidden;
 }
 
+.stats-section::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: 15%;
+    width: 550px;
+    height: 550px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+    filter: blur(40px);
+}
+
+.stats-section::after {
+    content: "";
+    position: absolute;
+    bottom: -30%;
+    right: 15%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(96, 165, 250, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+    filter: blur(40px);
+}
+
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    max-width: 1040px;
+    margin: 0 auto;
     position: relative;
     z-index: 1;
 }
 
 .stat-item {
     text-align: center;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: var(--radius-lg);
+    padding: 2.5rem 1.75rem 2.25rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow: 0 10px 34px rgba(0, 0, 0, 0.2);
-    transition: transform 0.25s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.25s ease;
+    box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.25s ease,
+                background 0.25s ease;
     position: relative;
     overflow: hidden;
 }
 
+/* Luminous gradient top edge */
+.stat-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20%;
+    right: 20%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.8), transparent);
+    opacity: 0.6;
+    transition: left 0.3s ease, right 0.3s ease, opacity 0.3s ease;
+}
+
 .stat-item:hover {
-    transform: translateY(-6px);
-    background: rgba(255, 255, 255, 0.16);
-    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-7px);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 100%);
+    border-color: rgba(56, 189, 248, 0.38);
+    box-shadow: 0 24px 48px -10px rgba(0, 0, 0, 0.45),
+                0 0 25px -5px rgba(56, 189, 248, 0.22),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.stat-item:hover::after {
+    left: 10%;
+    right: 10%;
+    opacity: 1;
 }
 
 .stat-item::before,
@@ -730,25 +783,62 @@ ul {
     opacity: 1;
 }
 
+.stat-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.22);
+    color: #38bdf8;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-item:hover .stat-icon-wrapper {
+    transform: scale(1.08);
+    background: rgba(56, 189, 248, 0.16);
+    border-color: rgba(56, 189, 248, 0.45);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
+}
+
 .stat-number {
     font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 0.5rem;
-    color: #ffffff;
     line-height: 1;
+    letter-spacing: -0.03em;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    color: #ffffff;
+    font-feature-settings: "tnum";
 }
 
-.stat-number--cohorts {
-    font-size: 3.5rem;
+.stat-digit {
+    background: linear-gradient(180deg, #ffffff 40%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat-suffix {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #38bdf8;
+    -webkit-text-fill-color: #38bdf8;
+    margin-left: 2px;
 }
 
 .stat-label {
-    font-size: 0.85rem;
-    opacity: 0.9;
+    font-size: 0.8125rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 0.09em;
+    color: rgba(226, 232, 240, 0.85);
+    margin: 0;
 }
 
 /* About Section */
@@ -2885,13 +2975,7 @@ ul {
     font-weight: 600;
 }
 
-/* Stats Section - Text-only stat item */
-.stats-grid .stat-item:last-child .stat-label {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: white;
-    margin-top: 0.5rem;
-}
+/* Stats Section - uniform labels */
 
 /* CTA Buttons Container */
 .cta-buttons {
@@ -2914,35 +2998,38 @@ ul {
     }
 
     .stats-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
     }
 }
 
 @media (max-width: 768px) {
     .stats-section {
-        padding: 30px 0 40px;
+        padding: 40px 0 48px;
     }
 
     .stats-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        max-width: 420px;
+        margin: 0 auto;
+        gap: 1.25rem;
     }
 
     .stat-item {
-        padding: 1.5rem 1rem;
+        padding: 2rem 1.5rem;
     }
 
     .stat-number {
-        font-size: 2.5rem;
+        font-size: 3rem;
+    }
+
+    .stat-suffix {
+        font-size: 2rem;
     }
 
     .stat-label {
         font-size: 0.75rem;
-        letter-spacing: 0.05em;
-    }
-
-    .stats-grid .stat-item:last-child .stat-label {
-        font-size: 1rem;
+        letter-spacing: 0.06em;
     }
 
     .updates-grid {
@@ -2989,28 +3076,28 @@ ul {
 
 @media (max-width: 480px) {
     .stats-section {
-        padding: 25px 0 35px;
+        padding: 32px 0 40px;
     }
 
     .stats-grid {
-        gap: 0.75rem;
+        gap: 1rem;
     }
 
     .stat-item {
-        padding: 1.25rem 0.75rem;
+        padding: 1.75rem 1.25rem;
     }
 
     .stat-number {
-        font-size: 2rem;
+        font-size: 2.5rem;
+    }
+
+    .stat-suffix {
+        font-size: 1.75rem;
     }
 
     .stat-label {
-        font-size: 0.7rem;
-        letter-spacing: 0.03em;
-    }
-
-    .stats-grid .stat-item:last-child .stat-label {
-        font-size: 0.9rem;
+        font-size: 0.75rem;
+        letter-spacing: 0.05em;
     }
 
     .team-grid {

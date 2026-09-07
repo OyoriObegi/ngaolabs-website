@@ -1,133 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2YLL20NCLZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2YLL20NCLZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-2YLL20NCLZ');
+    </script>
 
-  gtag('config', 'G-2YLL20NCLZ');
-</script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KWCD22DH');</script>
+    <!-- End Google Tag Manager -->
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex">
-    <meta name="description" content="Page not found. Ngao Labs - Shielding the Curious. A safe space to learn, build and belong.">
-    <title>404 - Page Not Found | Ngao Labs - Shielding the Curious</title>
+    <meta name="robots" content="noindex, follow">
+    <meta name="description" content="404 - Page Not Found. Even our best AI models couldn't predict this route. Ngao Labs - Shielding the Curious.">
+    <title>404: Out of Distribution | Ngao Labs - Shielding the Curious</title>
+
     <link rel="icon" type="image/webp" href="images/logo1.webp">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
     <link rel="stylesheet" href="css/style.css?v=20260109">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animations.css?v=20260109">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
-        .error-page {
-            min-height: 100vh;
+        .error-section {
+            min-height: calc(100vh - 72px);
             display: flex;
             align-items: center;
             justify-content: center;
-            background: var(--bg);
-            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            padding: 5rem 1.5rem;
+            background: radial-gradient(ellipse at 50% 20%, #0d1e38 0%, #070d1a 60%, #030712 100%);
+            color: #ffffff;
+        }
+
+        /* Ambient glowing background orbs */
+        .error-orb {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            filter: blur(70px);
+            z-index: 0;
+        }
+        .error-orb-1 {
+            top: 10%;
+            left: 15%;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.18) 0%, transparent 70%);
+        }
+        .error-orb-2 {
+            bottom: 10%;
+            right: 15%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.16) 0%, transparent 70%);
+        }
+
+        .error-container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
             text-align: center;
         }
-        .error-content {
-            max-width: 600px;
-            color: var(--text);
-        }
-        .error-code {
-            font-size: 8rem;
-            font-weight: 700;
-            line-height: 1;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--primary-light) 0%, var(--accent-2) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .error-title {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-        .error-description {
-            font-size: 1.125rem;
-            margin-bottom: 2rem;
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-        .error-actions {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .error-btn {
+
+        /* Top status pill */
+        .error-status-pill {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 0.875rem 1.5rem;
-            border-radius: 50px;
-            text-decoration: none;
+            gap: 0.6rem;
+            padding: 0.5rem 1.25rem;
+            border-radius: 9999px;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.28);
+            color: #38bdf8;
+            font-size: 0.8125rem;
             font-weight: 600;
-            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 1.75rem;
+            box-shadow: 0 4px 20px rgba(56, 189, 248, 0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
         }
-        .error-btn-primary {
-            background: linear-gradient(135deg, var(--primary-light) 0%, var(--accent-2) 100%);
-            color: white;
-            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+
+        .error-pulse-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #38bdf8;
+            box-shadow: 0 0 10px #38bdf8;
+            animation: pulseDot 2s ease-in-out infinite;
         }
-        .error-btn-primary:hover {
+
+        @keyframes pulseDot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.35; transform: scale(0.85); }
+        }
+
+        /* 404 Large Code */
+        .error-hero-code {
+            font-size: clamp(5.5rem, 14vw, 9.5rem);
+            font-weight: 900;
+            line-height: 0.95;
+            letter-spacing: -0.05em;
+            margin: 0 0 1.25rem;
+            background: linear-gradient(135deg, #ffffff 20%, #93c5fd 55%, #38bdf8 85%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 45px rgba(56, 189, 248, 0.35));
+            animation: float404 4s ease-in-out infinite;
+        }
+
+        @keyframes float404 {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .error-heading {
+            font-size: clamp(1.6rem, 3.5vw, 2.35rem);
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+        }
+
+        .error-lead {
+            font-size: clamp(1rem, 2vw, 1.1875rem);
+            color: rgba(226, 232, 240, 0.85);
+            max-width: 620px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.65;
+        }
+
+        /* Recovery Terminal Widget */
+        .error-terminal {
+            max-width: 680px;
+            margin: 0 auto 2.75rem;
+            background: rgba(10, 18, 36, 0.85);
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow:
+                0 20px 50px -10px rgba(0, 0, 0, 0.5),
+                0 0 30px -5px rgba(56, 189, 248, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            overflow: hidden;
+            text-align: left;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .error-terminal:hover {
+            transform: translateY(-3px);
+            border-color: rgba(56, 189, 248, 0.35);
+        }
+
+        .terminal-header {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            background: rgba(15, 23, 42, 0.8);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            gap: 0.5rem;
+        }
+
+        .terminal-dot {
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .dot-red { background: #ff5f56; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: #27c93f; }
+
+        .terminal-title {
+            margin-left: 0.5rem;
+            font-size: 0.8125rem;
+            font-family: 'JetBrains Mono', monospace;
+            color: rgba(226, 232, 240, 0.65);
+        }
+
+        .terminal-body {
+            padding: 1.25rem 1.5rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+
+        .code-comment { color: #64748b; font-style: italic; }
+        .code-keyword { color: #f472b6; font-weight: 600; }
+        .code-module { color: #38bdf8; }
+        .code-class { color: #fbbf24; }
+        .code-func { color: #60a5fa; }
+        .code-string { color: #34d399; }
+        .code-var { color: #e2e8f0; }
+        .code-err { color: #f87171; font-weight: 600; }
+        .code-punct { color: #94a3b8; }
+
+        /* Action Buttons */
+        .error-actions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .btn-fancy-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.95rem 2rem;
+            border-radius: 9999px;
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #0284c7 100%);
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 28px -4px rgba(37, 99, 235, 0.45);
+            transition: all 0.25s ease;
+        }
+
+        .btn-fancy-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 36px -4px rgba(37, 99, 235, 0.6);
+            border-color: rgba(255, 255, 255, 0.4);
+            color: #ffffff;
+        }
+
+        .btn-fancy-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.95rem 1.85rem;
+            border-radius: 9999px;
+            background: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: all 0.25s ease;
+        }
+
+        .btn-fancy-secondary:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.14);
+            border-color: rgba(56, 189, 248, 0.4);
+            color: #38bdf8;
+        }
+
+        /* Quick Navigation Bar */
+        .error-quicklinks {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .error-quicklinks-title {
+            font-size: 0.8125rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(148, 163, 184, 0.8);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .error-pills-list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
+
+        .error-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.45rem 1rem;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: rgba(226, 232, 240, 0.75);
+            font-size: 0.875rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .error-pill i {
+            font-size: 0.75rem;
+            color: #38bdf8;
+        }
+
+        .error-pill:hover {
+            background: rgba(56, 189, 248, 0.1);
+            border-color: rgba(56, 189, 248, 0.3);
+            color: #ffffff;
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4);
         }
-        .error-btn-secondary {
-            background: var(--bg-light);
-            color: var(--primary);
-            border: 1px solid var(--primary);
-        }
-        .error-btn-secondary:hover {
-            background: var(--primary);
-            color: var(--white);
-        }
-        .error-icon {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-            color: var(--accent);
-            opacity: 0.8;
-        }
+
         @media (max-width: 768px) {
-            .error-code {
-                font-size: 5rem;
+            .error-section {
+                padding: 4rem 1.25rem;
             }
-            .error-title {
-                font-size: 1.5rem;
+            .terminal-body {
+                font-size: 0.75rem;
+                padding: 1rem;
             }
-            .error-description {
-                font-size: 1rem;
+            .error-actions {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            .btn-fancy-primary,
+            .btn-fancy-secondary {
+                width: 100%;
+                justify-content: center;
             }
         }
     </style>
 </head>
 <body>
-    <div class="error-page">
-        <div class="error-content">
-            <div class="error-code">404</div>
-            <h1 class="error-title">Page Not Found</h1>
-            <p class="error-description">
-                The page you are looking for does not exist or may have been moved.
-            </p>
-            <div class="error-actions">
-                <a href="/" class="error-btn error-btn-primary">
-                    Back to Home
-                </a>
-                <a href="/contact" class="error-btn error-btn-secondary">
-                    Contact
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWCD22DH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/">
+                    <img src="images/logo1.webp" alt="Ngao Labs" class="logo-mark">
+                    <span class="logo-text">Ngao Labs</span>
                 </a>
             </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="/#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="/#program" class="nav-link">Program</a></li>
+                <li class="nav-item"><a href="/team" class="nav-link">Team</a></li>
+                <li class="nav-item"><a href="/resources" class="nav-link">Resources</a></li>
+                <li class="nav-item"><a href="/faq" class="nav-link">FAQ</a></li>
+                <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-    </div>
+    </nav>
+
+    <!-- Main 404 Hero Section -->
+    <main class="error-section">
+        <div class="error-orb error-orb-1"></div>
+        <div class="error-orb error-orb-2"></div>
+
+        <div class="error-container">
+            <!-- Status Badge -->
+            <div class="error-status-pill">
+                <span class="error-pulse-dot"></span>
+                <span>Error 404 · Out of Distribution</span>
+            </div>
+
+            <!-- Big Floating Number -->
+            <div class="error-hero-code" aria-hidden="true">404</div>
+
+            <!-- Heading & Description -->
+            <h1 class="error-heading">Even our best models couldn't find this page.</h1>
+            <p class="error-lead">
+                The coordinate you requested doesn't exist in our latent space—or it may have been moved. Don't worry, safe harbor is just a click away.
+            </p>
+
+            <!-- Ngao Recovery Console -->
+            <div class="error-terminal" aria-label="Error recovery console">
+                <div class="terminal-header">
+                    <span class="terminal-dot dot-red"></span>
+                    <span class="terminal-dot dot-yellow"></span>
+                    <span class="terminal-dot dot-green"></span>
+                    <span class="terminal-title"># ngaolabs/navigator.py</span>
+                </div>
+                <div class="terminal-body">
+                    <pre><code><span class="code-comment"># Anomaly Detected: Target route returned status 404</span>
+<span class="code-keyword">from</span> <span class="code-module">ngao_labs</span> <span class="code-keyword">import</span> <span class="code-class">Compass</span>, <span class="code-class">SafetyNet</span>
+
+<span class="code-keyword">try</span>:
+    <span class="code-variable">route</span> <span class="code-punct">=</span> <span class="code-class">SafetyNet</span><span class="code-punct">.</span><span class="code-func">locate</span><span class="code-punct">(</span><span class="code-variable">target</span><span class="code-punct">=</span><span class="code-string">"requested_path"</span><span class="code-punct">)</span>
+<span class="code-keyword">except</span> <span class="code-class">RouteNotFoundError</span>:
+    <span class="code-variable">safe_haven</span> <span class="code-punct">=</span> <span class="code-class">Compass</span><span class="code-punct">.</span><span class="code-func">reroute</span><span class="code-punct">(</span><span class="code-variable">destination</span><span class="code-punct">=</span><span class="code-string">"/"</span><span class="code-punct">)</span>
+    <span class="code-func">print</span><span class="code-punct">(</span><span class="code-string">"Coordinates locked. Reconnecting to safe space..."</span><span class="code-punct">)</span></code></pre>
+                </div>
+            </div>
+
+            <!-- Call to Actions -->
+            <div class="error-actions">
+                <a href="/" class="btn-fancy-primary">
+                    <i class="fas fa-arrow-left"></i> Return to Safe Space
+                </a>
+                <a href="apply.html" class="btn-fancy-secondary">
+                    <i class="fas fa-sparkles"></i> Join Cohort 4 Waitlist
+                </a>
+            </div>
+
+            <!-- Quick Navigation Chips -->
+            <div class="error-quicklinks">
+                <div class="error-quicklinks-title">Popular Destinations</div>
+                <div class="error-pills-list">
+                    <a href="/" class="error-pill"><i class="fas fa-home"></i> Home</a>
+                    <a href="/#program" class="error-pill"><i class="fas fa-graduation-cap"></i> Curriculum</a>
+                    <a href="/team" class="error-pill"><i class="fas fa-users"></i> Meet the Team</a>
+                    <a href="/faq" class="error-pill"><i class="fas fa-circle-question"></i> FAQs</a>
+                    <a href="/contact" class="error-pill"><i class="fas fa-envelope"></i> Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Ngao Labs</h3>
+                    <div class="brand-tagline">
+                        <span class="brand-tagline__main">Shielding the Curious.</span>
+                        <span class="brand-tagline__warm">A safe space to learn, build and belong.</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://x.com/Ngao_Labs" target="_blank" rel="noopener noreferrer" aria-label="Ngao Labs on X"><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 512 512" style="fill: white; margin-top: 12px;"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a>
+                        <a href="https://www.linkedin.com/company/ngao-labs/" target="_blank" rel="noopener noreferrer" class="footer-social-text">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/#about">About</a></li>
+                        <li><a href="/#program">Program</a></li>
+                        <li><a href="/team">Team</a></li>
+                        <li><a href="/resources">Resources</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Program</h4>
+                    <ul>
+                        <li><a href="apply.html">Join Cohort 4 Waitlist</a></li>
+                        <li><a href="/#program">Curriculum</a></li>
+                        <li><a href="/resources">Community Updates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>hello@ngaolabs.org</p>
+                    <p>Nairobi, Kenya</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ngao Labs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="js/main.js?v=20260109"></script>
 </body>
 </html>
-
