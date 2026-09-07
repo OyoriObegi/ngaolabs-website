@@ -26,13 +26,13 @@ class ResourcesManager {
             news: [
                 {
                     id: 'n1',
-                    title: 'Cohort 1 Enters Final Capstone Week',
-                    description: 'After 9 weeks of intensive training, our 15 active learners are now building their final end-to-end AI solutions. Presentations are scheduled for Dec 5th.',
+                    title: 'Cohort 3 Celebrates Graduation of 55 Learners',
+                    description: 'Our 55 active learners completed their 10-week intensive program, presenting market-ready AI and data solutions to a panel of industry experts.',
                     imageData: null,
-                    imageUrl: 'images/cohort1.webp',
+                    imageUrl: 'images/cohort3.jpg',
                     linkUrl: 'blog/cohort-1-capstone.html',
                     category: 'Community',
-                    date: '2025-12-01',
+                    date: '2026-08-25',
                     type: 'news'
                 },
                 {

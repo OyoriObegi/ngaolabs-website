@@ -317,11 +317,15 @@ function validateField(field) {
 
 // Show field error
 function showFieldError(field, message) {
-    const errorSpan = field.parentNode.querySelector('.error-message');
-    if (errorSpan) {
-        errorSpan.textContent = message;
-        field.parentNode.classList.add('error');
+    let errorSpan = field.parentNode.querySelector('.error-message');
+    if (!errorSpan) {
+        errorSpan = document.createElement('span');
+        errorSpan.className = 'error-message';
+        errorSpan.setAttribute('role', 'alert');
+        field.parentNode.appendChild(errorSpan);
     }
+    errorSpan.textContent = message;
+    field.parentNode.classList.add('error');
 }
 
 // Clear field error

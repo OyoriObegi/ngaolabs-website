@@ -877,7 +877,7 @@ ul {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-sm);
     text-align: left;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.2s ease, box-shadow 0.2s ease;
     border: 1px solid var(--border-light);
     border-bottom: 3px solid #cfe0f7;
     position: relative;
@@ -1514,14 +1514,44 @@ ul {
     transform: translateY(-3px);
 }
 
-/* Ensure X (Twitter) SVG icon is white in footer */
+/* Ensure footer social SVG icons are centered and white */
 .social-links a svg {
     fill: #ffffff;
-    transition: fill 0.3s ease;
+    margin-top: 0 !important;
+    display: block;
+    transition: fill 0.3s ease, transform 0.2s ease;
 }
 
 .social-links a:hover svg {
     fill: #ffffff !important;
+    transform: scale(1.08);
+}
+
+/* Accessible anchor target offset for fixed headers */
+.anchor-target {
+    display: block;
+    position: relative;
+    top: -90px;
+    visibility: hidden;
+    height: 0;
+    pointer-events: none;
+}
+
+/* Form validation error styling */
+.error-message {
+    display: block;
+    color: #ef4444;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: 0.35rem;
+    line-height: 1.4;
+}
+
+.form-group.error input,
+.form-group.error select,
+.form-group.error textarea {
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15) !important;
 }
 
 /* Article Image Styles */
