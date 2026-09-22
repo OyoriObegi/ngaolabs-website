@@ -2844,20 +2844,49 @@ ul {
 
 .stories-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: column;
+    grid-auto-columns: min(85vw, 320px);
     gap: 2rem;
     margin-top: 2rem;
+    padding-bottom: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-light) var(--bg-light);
+}
+
+.scroll-indicator {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.scroll-indicator i {
+    animation: bounceRight 1.5s infinite;
+}
+
+@keyframes bounceRight {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
 }
 
 .story-card {
     background: var(--surface);
-    padding: 2.5rem;
+    padding: 1.5rem;
     border-radius: var(--radius-lg);
     text-align: center;
     transition: transform 0.25s ease, border-color 0.2s ease, box-shadow 0.25s ease;
     border: 1px solid var(--border-light);
     position: relative;
     overflow: hidden;
+    scroll-snap-align: start;
 }
 
 .story-card:hover {
@@ -2867,15 +2896,15 @@ ul {
 }
 
 .story-avatar {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     background: var(--bg-light);
     border: 2px solid var(--border-light);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
+    margin: 0 auto 1rem;
     color: var(--primary);
     font-size: 2.5rem;
     box-shadow: none;
@@ -2896,8 +2925,8 @@ ul {
 }
 
 .story-quote {
-    font-size: 1.02rem;
-    line-height: 1.75;
+    font-size: 0.95rem;
+    line-height: 1.6;
     color: var(--text);
     font-style: italic;
     margin: 0;
@@ -2911,7 +2940,7 @@ ul {
 .story-author h4 {
     color: var(--primary);
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: 600;
 }
 
@@ -3209,6 +3238,16 @@ ul {
     color: var(--text-light);
     font-size: 0.875rem;
     line-height: 1.6;
+}
+
+.mantra {
+    display: inline-block;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--accent);
+    font-size: 1em;
+    padding: 0 4px;
+    letter-spacing: 0.5px;
     margin: 0;
     text-align: left;
 }
@@ -3269,9 +3308,6 @@ ul {
 
 /* Responsive adjustments for new sections */
 @media (max-width: 900px) {
-    .stories-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
     .partners-grid {
         flex-wrap: wrap;
@@ -3340,10 +3376,7 @@ ul {
         font-size: 2.5rem;
     }
     
-    .stories-grid {
-        grid-template-columns: 1fr;
-    }
-    
+
     .cta-buttons {
         flex-direction: column;
         align-items: center;
