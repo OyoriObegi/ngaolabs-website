@@ -2338,8 +2338,7 @@ ul {
     .weeks-grid,
     .program-snapshot,
     .program-features,
-    .testimonials-grid,
-    .stories-grid {
+    .testimonials-grid {
         grid-template-columns: 1fr;
     }
 
